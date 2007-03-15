@@ -1,3 +1,5 @@
+#summary themonoSPOT - What is ...and how install
+
 http://img147.imageshack.us/img147/7605/monospotte5.png
 
 = themonoSPOT: What is ... =
@@ -29,6 +31,5 @@ You can also export the report in text format.
 *WINDOWS Platform:*
   * _You need to install before MONO Framework and GTK# runtime from installer that is available online on MONO Project website. At now the min request is Mono ver. 1.2.3.1 (with GTK# included 2.8.3) (web site: http://www.mono-project.com/Downloads) _
   * _You can also create a desktop shortcut that use the command _
-
 
 
