@@ -1,0 +1,22 @@
+= themonoSPOT: What is ... =
+
+It's a _*Cross Platform*_ application that analize an avi file and say you some info about:
+  * _Frame Rate_
+  * _Frame Size_
+  * _Total Time_
+  * _Total Frames_
+  * _Video data rate_
+  * _Video Quality_
+  * _Number of audio streams_
+  * _Audio samples per sec_
+  * _Audio data rate_
+  * _Other info_
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+
