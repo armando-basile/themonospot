@@ -1,4 +1,5 @@
-#summary : themonoSPOT - Cos'è e come si installa...
+#summary _*themonoSPOT - Cos'è e come si installa...*_
+
 http://img147.imageshack.us/img147/7605/monospotte5.png
 
 = themonoSPOT: Che cos'è ... =
@@ -30,6 +31,5 @@ Tu puoi anche esportare il report in formato testo al termine della scansione.
 *Piattaforma WINDOWS:*
   * _Prima hai bisogno di MONO Framework e GTK# runtime dall'installer che trovi online sul sito MONO Project. Al momento la versione minima richiesta è Mono ver. 1.2.3.1 (con GTK# incluso v.2.8.3) (web site: http://www.mono-project.com/Downloads) _
   * _Puoi anche creare sul desktop un collegamento all'applicazione che come comando esegue: *mono <themonoSPOT path>/themonoSPOT.exe* _
-
 
 
