@@ -12,11 +12,12 @@ It's a _*Cross Platform*_ application that analize an avi file and say you some 
   * _Audio data rate_
   * _Other info_
 
-= Details =
+You can also export the report in text format.
 
-Add your content here.  Format your content with:
+= HOW INSTALL =
+
+LINUX Platform:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
 
