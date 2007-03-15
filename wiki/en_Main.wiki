@@ -1,3 +1,5 @@
+http://img147.imageshack.us/img147/7605/monospotte5.png
+
 = themonoSPOT: What is ... =
 
 It's a _*Cross Platform*_ application that analize an avi file and say you some info about:
@@ -14,10 +16,19 @@ It's a _*Cross Platform*_ application that analize an avi file and say you some 
 
 You can also export the report in text format.
 
-= HOW INSTALL =
+= themonoSPOT: How Install =
 
-LINUX Platform:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*LINUX Platform:*
+  * _You need to install before MONO Framework from online repository of your linux distribution. At now the min request is Mono ver. 1.2.3.1 (web site: http://www.mono-project.com) _
+  * _You need to install also GTK#. At now the min request is ver. 2.8.3 _
+  * _At now you can run themonoSPOT with command line: $mono <themonoSPOT path>/themonoSPOT.exe _
+  * _You can also create a desktop shortcut that use the command _
+
+
+
+*WINDOWS Platform:*
+  * _You need to install before MONO Framework and GTK# runtime from installer that is available online on MONO Project website. At now the min request is Mono ver. 1.2.3.1 (with GTK# included 2.8.3) (web site: http://www.mono-project.com/Downloads) _
+  * _You can also create a desktop shortcut that use the command _
+
+
 
