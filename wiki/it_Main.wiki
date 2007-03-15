@@ -1,0 +1,36 @@
+http://img147.imageshack.us/img147/7605/monospotte5.png
+
+= themonoSPOT: Che cos'è ... =
+
+E' un applicativo _*Cross Platform*_ che analizza un file avi e fornisce informazioni sul suo contenuto:
+  * _Frame Rate_
+  * _Frame Size_
+  * _Tempo totale_
+  * _Numero di Frames_
+  * _Video data rate_
+  * _Qualità video_
+  * _Numero di flussi audio_
+  * _Audio samples per sec_
+  * _Audio data rate_
+  * _Altre info_
+
+Tu puoi anche esportare il report in formato testo al termine della scansione.
+
+= themonoSPOT: Come installare =
+
+*Piattaforma LINUX:*
+  * _Prima hai bisogno di MONO Framework che puoi installare direttamente dai repository online della tua distribuzione linux. Al momento la versione minima richiesta è Mono ver. 1.2.3.1 (web site: http://www.mono-project.com) _
+  * _Hai bisogno anche di GTK#. Al momento la versione minima richiesta è la 2.8.3 _
+  * _Adesso puoi avviare themonoSPOT con la seguente riga di comando: $mono <themonoSPOT path>/themonoSPOT.exe _
+  * _Puoi anche creare sul desktop un collegamento all'applicazione che come comando esegue: *mono <themonoSPOT path>/themonoSPOT.exe* _
+
+
+
+*Piattaforma WINDOWS:*
+  * _Prima hai bisogno di MONO Framework e GTK# runtime dall'installer che trovi online sul sito MONO Project. Al momento la versione minima richiesta è Mono ver. 1.2.3.1 (con GTK# incluso v.2.8.3) (web site: http://www.mono-project.com/Downloads) _
+  * _Puoi anche creare sul desktop un collegamento all'applicazione che come comando esegue: *mono <themonoSPOT path>/themonoSPOT.exe* _
+
+
+
+
+
