@@ -23,6 +23,7 @@ You can also export the report in text format.
 *LINUX Platform:*
   * _You need to install before MONO Framework from online repository of your linux distribution. At now the min request is Mono ver. 1.2.3.1 (web site: http://www.mono-project.com) _
   * _You need to install also GTK#. At now the min request is ver. 2.8.3 _
+  * _Obtain from [http://code.google.com/p/themonospot/downloads/list DOWNLOAD] section of this site the last version of themonoSPOT _
   * _At now you can run themonoSPOT with command line: $mono <themonoSPOT path>/themonoSPOT.exe _
   * _You can also create a desktop shortcut that use the command _
 
@@ -30,6 +31,6 @@ You can also export the report in text format.
 
 *WINDOWS Platform:*
   * _You need to install before MONO Framework and GTK# runtime from installer that is available online on MONO Project website: http://www.mono-project.com/Downloads _
+  * _Obtain from [http://code.google.com/p/themonospot/downloads/list DOWNLOAD] section of this site the last version of themonoSPOT (with installer) _
   * _At now you can run themonoSPOT with command line: mono <themonoSPOT path>/themonoSPOT.exe _
   * _You can also create a desktop shortcut that use the command _
-
