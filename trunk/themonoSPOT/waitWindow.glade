@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.1.5 on Sun Mar 18 21:25:38 2007 by armando@wksmaster-->
+<glade-interface>
+  <widget class="GtkWindow" id="topWindow">
+    <property name="resizable">False</property>
+    <property name="window_position">GTK_WIN_POS_CENTER</property>
+    <child>
+      <widget class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkLabel" id="lblInfo">
+            <property name="width_request">585</property>
+            <property name="height_request">26</property>
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">loading data... wait please</property>
+          </widget>
+          <packing>
+            <property name="x">19</property>
+            <property name="y">11</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkProgressBar" id="myPBar">
+            <property name="width_request">579</property>
+            <property name="height_request">26</property>
+            <property name="visible">True</property>
+          </widget>
+          <packing>
+            <property name="x">23</property>
+            <property name="y">38</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="cmdCancel">
+            <property name="width_request">100</property>
+            <property name="height_request">26</property>
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">cancel</property>
+          </widget>
+          <packing>
+            <property name="x">259</property>
+            <property name="y">74</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
