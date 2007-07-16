@@ -34,6 +34,8 @@
     <File name="./resources/monoSPOT_16.png" subtype="Code" buildaction="EmbedAsResource" />
     <File name="./resources/monoSPOT_48.png" subtype="Code" buildaction="EmbedAsResource" />
     <File name="./resources/monologo.png" subtype="Code" buildaction="EmbedAsResource" />
+    <File name="./src/ui/monoSPOT4cc.cs" subtype="Code" buildaction="Compile" />
+    <File name="./resources/ChangeFourCCwin.glade" subtype="Code" buildaction="EmbedAsResource" />
   </Contents>
   <References>
     <ProjectReference type="Gac" localcopy="True" refto="gdk-sharp, Version=2.10.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
