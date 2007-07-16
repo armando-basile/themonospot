@@ -246,6 +246,22 @@ namespace Utility
             return result;
         }
 
+        public static byte[] ToFourCCByte(string FourCC)
+        {
+            if (FourCC.Length != 4)
+            {
+                throw new Exception("FourCC strings must be 4 characters long " + FourCC);
+            }
+
+            byte[] tmpByte = new byte[4];
+            tmpByte[0] = Convert.ToByte(((int)FourCC[0]));
+            tmpByte[1] = Convert.ToByte(((int)FourCC[1]));
+            tmpByte[2] = Convert.ToByte(((int)FourCC[2]));
+            tmpByte[3] = Convert.ToByte(((int)FourCC[3]));
+
+            return tmpByte;
+        }
+        
         public static int ToFourCC(char[] FourCC)
         {
             if (FourCC.Length != 4)

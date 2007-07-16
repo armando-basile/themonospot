@@ -22,9 +22,14 @@ namespace monoSpotMain {
 		[Glade.Widget]			TreeView AudioTreeView;
 
 		configurationClass settingsClass;
+		string ASH = "";
+		string VSH = "";
+		long ASH_offset = 0;
+		long VSH_offset = 0;
+
 
 		// Create new instance of monoSPOT
-		public monoSPOT() 
+		public monoSPOT(string[] args) 
 		{			
 			Window.DefaultIcon =	Gdk.Pixbuf.LoadFromResource("monoSPOT.png");
 			Glade.XML gxml =  new Glade.XML("monoSPOT.glade", "MonoSPOTWindow");
@@ -64,13 +69,40 @@ namespace monoSpotMain {
 			
 			MonoSPOTWindow.DeleteEvent += On_MainWindow_Delete;
 			MonoSPOTWindow.ShowAll();
+			
+			// If there is a path to process in a command line
+			if (args.Length > 0)
+			{
+				Console.WriteLine("Path: ".PadRight(20,(char)46) + args[0]);
+				
+				if (File.Exists(args[0]) == false)
+				{	
+					Console.WriteLine("Path not found...:");
+					// No Path Founded				
+					MessageDialog Dlg;
+					Dlg=new MessageDialog(null ,DialogFlags.Modal,MessageType.Error,ButtonsType.Ok,
+							"Path (" + args[0] + ") Not found... !!!");
+					Dlg.Title = "Error detected";
+					Dlg.Icon = Gdk.Pixbuf.LoadFromResource("monoSPOT.png");					
+					Dlg.Run();
+					Dlg.Destroy();	
+					Dlg = null;
+				}
+				else
+				{
+					FilenameChooser.SetFilename(args[0]);
+					parseFile(FilenameChooser.Filename);
+				}
+			}
+			
+			
 		}
     
 		// Entry Point
 		public static void Main (string[] args)
 		{
 			Gtk.Application.Init();
-			new monoSPOT();
+			new monoSPOT(args);
 			Gtk.Application.Run();
 		}
 		
@@ -104,6 +136,41 @@ namespace monoSpotMain {
 			{
 				parser = new monoSpotParser();
 				parser.OpenAviFile(filename);
+				
+				ASH_offset = parser.fourCC_AVISTREAMHEADER_offset;
+				VSH_offset = parser.fourCC_AVIVIDEOHEADER_offset;
+				
+				/* -------------------------------------------------------------------------------------------------
+				 * START DEBUG MODE: Test fourCC_AVISTREAMHEADER_offset and fourCC_AVIVIDEOHEADER_offset content
+				
+				Console.WriteLine("4CC OffSet AVISTREAMHEADER: " + parser.fourCC_AVISTREAMHEADER_offset.ToString() );
+				Console.WriteLine("4CC OffSet AVIVIDEOHEADER: " + parser.fourCC_AVIVIDEOHEADER_offset.ToString() );
+
+				byte[] tmpBuffer = new byte[4];
+				int retValue = 0;
+				int readBytes = 0;
+				
+				FileStream debugSR = new FileStream(filename, FileMode.Open,FileAccess.Read);
+				
+				debugSR.Seek(parser.fourCC_AVISTREAMHEADER_offset, SeekOrigin.Current);
+				tmpBuffer = new byte[4];
+				readBytes = debugSR.Read(tmpBuffer,0,4);
+				retValue = tmpBuffer[0]+(tmpBuffer[1]<<8)+(tmpBuffer[2]<<16)+(tmpBuffer[3]<<24);
+				Console.WriteLine("4CC ASH: " + Utility.cEncoding.FromFourCC(retValue) );
+				
+				debugSR.Seek(parser.fourCC_AVIVIDEOHEADER_offset, SeekOrigin.Begin);
+				tmpBuffer = new byte[4];
+				readBytes = debugSR.Read(tmpBuffer,0,4);
+				retValue = tmpBuffer[0]+(tmpBuffer[1]<<8)+(tmpBuffer[2]<<16)+(tmpBuffer[3]<<24);
+				Console.WriteLine("4CC AVH: " + Utility.cEncoding.FromFourCC(retValue) );
+				
+				debugSR.Close();
+				debugSR.Dispose();
+				debugSR = null;
+				 
+				 * END DEBUG MODE
+				   ---------------------------------------------------------------------------------------------- */
+				
 			} 
 			catch (monoSpotParserException e) 
 			{
@@ -132,7 +199,7 @@ namespace monoSpotMain {
 			ListStore informations = new ListStore(typeof(string), typeof(string));
 			Hashtable retInfos = parser.GetVideoInformations();
 			
-			informations.AppendValues("Video:", retInfos["Video:"].ToString());
+			informations.AppendValues("Video:", retInfos["Video codec:"].ToString() + " [" + retInfos["Codec descr:"].ToString() + "]");
 			informations.AppendValues("Frame Size:", retInfos["Frame Size:"].ToString());
 			informations.AppendValues("Average Video Bitrate:", retInfos["Average Video Bitrate:"].ToString()); 
 			informations.AppendValues("Avi file size:", retInfos["Avi file size:"].ToString());
@@ -141,7 +208,9 @@ namespace monoSpotMain {
 			informations.AppendValues("Total Frames:", retInfos["Total Frames:"].ToString());
 			informations.AppendValues("Video Data Rate:", retInfos["Video Data Rate:"].ToString());
 			informations.AppendValues("Video Quality:", retInfos["Video Quality:"].ToString());
-			
+			ASH = retInfos["Codec descr:"].ToString();
+			VSH = retInfos["Video codec:"].ToString();
+				
 			for (int k=0; k<8; k++)
 				if (retInfos["Info Data[" + k + "]:"] != null)
 					informations.AppendValues("Info Data[" + k + "]:", retInfos["Info Data[" + k + "]:"].ToString());
@@ -161,6 +230,46 @@ namespace monoSpotMain {
 		}
 
 
+		private void on_Change4ccButton_clicked(object sender,EventArgs a)
+		{
+			if (VideoTreeView.Model.IterNChildren() == 0)
+				return;
+			string tmpVSH = VSH;
+			string tmpASH = ASH;
+			int retSelect = 0;
+			monoSPOT4cc newFourCC = new monoSPOT4cc(this.MonoSPOTWindow, DialogFlags.DestroyWithParent, ref tmpVSH, ref tmpASH, out retSelect);
+			
+			if (retSelect != 1)
+				return;
+			
+			// Are you sure ?
+			if ( tmpVSH != VSH || tmpASH != ASH )
+			{
+				Gtk.MessageDialog FourCCdialog = new MessageDialog(this.MonoSPOTWindow, 
+				                                     			   DialogFlags.DestroyWithParent, 
+				                                     			   MessageType.Question,
+				                                     			   ButtonsType.YesNo, 
+				                                     			   "Are you sure to update your avi file with new FourCC values ?");
+				
+				FourCCdialog.Icon = Gdk.Pixbuf.LoadFromResource("monoSPOT.png");
+				FourCCdialog.Title = "Change FourCC Values";
+				ResponseType retFourCCdialog = (ResponseType)FourCCdialog.Run();				
+				FourCCdialog.Destroy();
+				FourCCdialog.Dispose();
+				FourCCdialog = null;
+				
+				if (retFourCCdialog == ResponseType.Yes)
+				{
+					ASH = tmpASH;
+					VSH = tmpVSH;
+					updateFourCC();
+					parseFile(FilenameChooser.Filename);
+					
+				}
+				
+			}
+		}
+		
 		private void on_infoButton_button_release_event(object sender,EventArgs a)
 		{
 			Console.WriteLine("info...");
@@ -294,6 +403,38 @@ namespace monoSpotMain {
 		}
 		
 		
+		private void updateFourCC()
+		{
+			byte[] tmpASHarray = null;
+			byte[] tmpVSHarray = null;
+			int ASH_value = 0;
+			int VSH_value = 0;
+			int retValue = 0;
+			int readBytes = 0;
+			
+			FileStream updaterSW = new FileStream(FilenameChooser.Filename , FileMode.Open ,FileAccess.ReadWrite);
+			
+			updaterSW.Seek(ASH_offset, SeekOrigin.Current);
+			tmpASHarray = Utility.cEncoding.ToFourCCByte(ASH);
+			Console.WriteLine(tmpASHarray[0].ToString("X2") + 
+			                  tmpASHarray[1].ToString("X2") + 
+			                  tmpASHarray[2].ToString("X2") + 
+			                  tmpASHarray[3].ToString("X2"));
+			updaterSW.Write(tmpASHarray, 0, 4);
+
+			updaterSW.Seek(VSH_offset, SeekOrigin.Begin);
+			tmpVSHarray = Utility.cEncoding.ToFourCCByte(VSH);
+			Console.WriteLine(tmpVSHarray[0].ToString("X2") + 
+			                  tmpVSHarray[1].ToString("X2") + 
+			                  tmpVSHarray[2].ToString("X2") + 
+			                  tmpVSHarray[3].ToString("X2"));
+			updaterSW.Write(tmpVSHarray, 0, 4);
+
+			updaterSW.Close();
+			updaterSW.Dispose();
+			updaterSW = null;
+			return;
+		}
 		
 		
 	}

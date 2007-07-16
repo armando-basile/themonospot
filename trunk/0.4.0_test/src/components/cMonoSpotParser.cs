@@ -68,12 +68,20 @@ namespace monoSpotMain
 		
 		private string _m_filename;
 		private string _m_shortname;
+		private long _m_fourCC_AviStreamHeader;
+		private long _m_fourCC_AviVideoHeader;
 		private long _m_filesize;
 		private long _m_posStream;
 		private long _m_MoviSize=0;
 		private long _m_MoviStart=0;
 		private FileStream aviStreamReader;
 		
+		public long fourCC_AVISTREAMHEADER_offset
+		{	get	{	return _m_fourCC_AviStreamHeader;}	}
+
+		public long fourCC_AVIVIDEOHEADER_offset
+		{	get	{	return _m_fourCC_AviVideoHeader;}	}
+
 		public AVIMAINHEADER headerFile
 		{	get	{	return myAviHeader;}	}
 		
@@ -305,6 +313,9 @@ namespace monoSpotMain
 			int byteOfINFOReaded=0;
 			string strType = "";
 			
+			_m_fourCC_AviVideoHeader = 0;
+			_m_fourCC_AviStreamHeader = 0;
+			
 			// Loop until EOF
 			while (_m_posStream < _m_filesize )
 			{
@@ -377,7 +388,7 @@ namespace monoSpotMain
 					{
 						// "strh"
 						tmpByteArray = new byte[56];
-						readBytes = aviStreamReader.Read(tmpByteArray,0,56);
+						readBytes = aviStreamReader.Read(tmpByteArray,0,56);						
 						_m_posStream +=56;
 						
 						// Update Array of Stream Headers
@@ -387,6 +398,12 @@ namespace monoSpotMain
 						myAviStreamHeader[ myAviStreamHeader.Length-1 ] = tmpSH;
 						strType = cEncoding.FromFourCC(tmpSH.fccType);
 						Console.WriteLine("STREAM TYPE ".PadRight(20,(char)46) + cEncoding.FromFourCC(tmpSH.fccType) );
+						Console.WriteLine("STREAM HEARER ".PadRight(20,(char)46) + cEncoding.FromFourCC(tmpSH.fccHandler) );
+						
+						// fourCC_AviStreamHeader position
+						if (_m_fourCC_AviVideoHeader == 0)
+							_m_fourCC_AviStreamHeader = _m_posStream - 52;
+						
 					}					
 					else if(FourCC == AviRiffData.ckidStreamFormat)
 					{
@@ -397,10 +414,13 @@ namespace monoSpotMain
 							readBytes = aviStreamReader.Read(tmpByteArray,0,40);
 							_m_posStream +=readBytes;
 							
+							// fourCC_AviVideoHeader position
+							_m_fourCC_AviVideoHeader = _m_posStream - 24;
+						
 							// Update Array of Stream Format Video
 							addNew_BITMAPINFOHEADER();
 							BITMAPINFOHEADER tmpBMP = new BITMAPINFOHEADER();
-							tmpBMP.loadDataStructure(tmpByteArray);						
+							tmpBMP.loadDataStructure(tmpByteArray);
 							myAviBitMap[ myAviBitMap.Length-1 ] = tmpBMP;							 
 
 						}
@@ -637,6 +657,7 @@ namespace monoSpotMain
 			double WdH=0;
 			int framePerSec=1;
 			int AverageVideoBitRate = 0;
+			string fccDesc = "";
 			string Frame_Size = "";
 			string Total_Time = "";
 			string Frame_Rate = "";
@@ -650,6 +671,7 @@ namespace monoSpotMain
 				!= "vids" ) 
 					continue;
 				long totalTime = 0;
+				fccDesc = cEncoding.FromFourCC(headerStreams[k].fccHandler);
 				if (headerFile.dwMicroSecPerFrame > 0)
 					totalTime =(long)((long)headerFile.dwTotalFrames *
 							  (long) headerFile.dwMicroSecPerFrame);
@@ -677,7 +699,8 @@ namespace monoSpotMain
 			videoQuality = (0.75 * WdH) * (AverageVideoBitRate / framePerSec);
 			
 
-			informations.Add("Video:", cEncoding.FromFourCC(videoStreams[0].biCompression));
+			informations.Add("Video codec:", cEncoding.FromFourCC(videoStreams[0].biCompression));
+			informations.Add("Codec descr:", fccDesc);
 			informations.Add("Frame Size:", Frame_Size );
 			informations.Add("Average Video Bitrate:", AverageVideoBitRate.ToString() + " Kb/Sec");	       
 			informations.Add("Avi file size:", ((m_filesize / 1024).ToString("#,### KB")));

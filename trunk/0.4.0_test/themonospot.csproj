@@ -12,6 +12,7 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <StartArguments>%24{TargetPath}</StartArguments>
     <StartWorkingDirectory>%24{TargetDir}</StartWorkingDirectory>
+    <ApplicationIcon>resources\monoSPOT.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -93,11 +94,13 @@
     <Compile Include="src\components\cMonoSpotParser.cs" />
     <Compile Include="src\components\configurationClass.cs" />
     <Compile Include="src\ui\monoSPOT.cs" />
+    <Compile Include="src\ui\monoSPOT4cc.cs" />
     <Compile Include="src\ui\monoSPOTinfo.cs" />
     <Compile Include="src\ui\monoSPOTwait.cs" />
     <EmbeddedResource Include="resources\infowin.glade" />
     <EmbeddedResource Include="resources\monoSPOT_16.png" />
     <EmbeddedResource Include="resources\monologo.png" />
     <EmbeddedResource Include="resources\monoSPOT_48.png" />
+    <EmbeddedResource Include="resources\ChangeFourCCwin.glade" />
   </ItemGroup>
 </Project>
