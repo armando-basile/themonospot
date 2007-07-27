@@ -1,0 +1,2 @@
+- added Packet Bitstream Detect
+- added save of file with userdata changed (only for DivX..... userdata)
