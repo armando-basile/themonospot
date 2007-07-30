@@ -1,3 +1,0 @@
-- added autosave of last folder used
-- added extraction of USER DATA infos from MOVI Chunk
-- added FourCC change function (to update fourCC Code and Description values)
