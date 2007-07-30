@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.0.2 on Wed Jul 25 10:43:05 2007 by NBasile@NTEST0W-->
+<!--Generated with glade3 3.0.2 on Mon Jul 30 12:03:17 2007 by NBasile@NTEST0W-->
 <glade-interface>
   <widget class="GtkWindow" id="MonoSPOTWindow">
     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
@@ -105,7 +105,6 @@
                         <property name="can_focus">True</property>
                         <property name="events">GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                         <property name="enable_search">False</property>
-                        <signal name="button_press_event" handler="on_VideoTreeView_press"/>
                       </widget>
                     </child>
                   </widget>
@@ -283,6 +282,7 @@
                     <property name="receives_default">True</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                     <property name="use_stock">True</property>
+                    <property name="tooltip" translatable="yes">Save report as text file</property>
                     <signal name="clicked" handler="on_ExportButton_clicked"/>
                     <child>
                       <widget class="GtkHBox" id="hbox6">
@@ -318,6 +318,7 @@
                     <property name="receives_default">True</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                     <property name="use_stock">True</property>
+                    <property name="tooltip" translatable="yes">Change FourCC value and description</property>
                     <signal name="clicked" handler="on_Change4ccButton_clicked"/>
                     <child>
                       <widget class="GtkHBox" id="hbox8">
@@ -347,6 +348,46 @@
                   </widget>
                   <packing>
                     <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="ChangeUserData">
+                    <property name="visible">True</property>
+                    <property name="sensitive">False</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                    <property name="use_stock">True</property>
+                    <property name="tooltip" translatable="yes">Save file with standard UserData value (DivX999b000p)</property>
+                    <signal name="clicked" handler="on_ChangeUserData_clicked"/>
+                    <child>
+                      <widget class="GtkHBox" id="hbox9">
+                        <property name="visible">True</property>
+                        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <child>
+                          <widget class="GtkImage" id="image5">
+                            <property name="visible">True</property>
+                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                            <property name="stock">gtk-save-as</property>
+                          </widget>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="label9">
+                            <property name="visible">True</property>
+                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                            <property name="label" translatable="yes">_UserData</property>
+                            <property name="use_underline">True</property>
+                            <property name="mnemonic_widget">ChangeUserData</property>
+                          </widget>
+                          <packing>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
@@ -383,7 +424,7 @@
                     </child>
                   </widget>
                   <packing>
-                    <property name="position">2</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
               </widget>
@@ -396,23 +437,6 @@
             <property name="expand">False</property>
             <property name="position">3</property>
           </packing>
-        </child>
-      </widget>
-    </child>
-  </widget>
-  <widget class="GtkMenu" id="menu_UD">
-    <property name="visible">True</property>
-    <child>
-      <widget class="GtkImageMenuItem" id="menu_SaveFile">
-        <property name="visible">True</property>
-        <property name="label" translatable="yes">save file with UserData = DivX999b000p</property>
-        <property name="use_underline">True</property>
-        <signal name="button_release_event" handler="on_menu_SaveFile_button_release_event"/>
-        <child internal-child="image">
-          <widget class="GtkImage" id="menu-item-image1">
-            <property name="visible">True</property>
-            <property name="stock">gtk-save</property>
-          </widget>
         </child>
       </widget>
     </child>

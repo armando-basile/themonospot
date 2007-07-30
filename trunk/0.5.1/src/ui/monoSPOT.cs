@@ -16,11 +16,11 @@ namespace monoSpotMain {
 		[Glade.Widget]			FileChooserButton FilenameChooser;
 		[Glade.Widget]			Button ExportButton;
 		[Glade.Widget]			Button infoButton;
+		[Glade.Widget]			Button ChangeUserData;
 		[Glade.Widget]			Image VideoImage;
 		[Glade.Widget]			Image AudioImage;
 		[Glade.Widget]			TreeView VideoTreeView;
 		[Glade.Widget]			TreeView AudioTreeView;
-		[Glade.Widget]			Menu menu_UD;
 
 		
 		configurationClass settingsClass;
@@ -136,6 +136,8 @@ namespace monoSpotMain {
 		private void parseFile (string filename) 
 		{
 			monoSpotParser parser = null;
+			userDataToChange = "";
+			ChangeUserData.Sensitive=false;
 			
 			if (File.Exists(filename) != true)
 				return;
@@ -235,8 +237,20 @@ namespace monoSpotMain {
 					informations.AppendValues("Info Data[" + k + "]:", retInfos["Info Data[" + k + "]:"].ToString());
 
 			for (int k=0; k<8; k++)
+			{
 				if (retInfos["User Data[" + k + "]:"] != null)
+				{
 					informations.AppendValues("User Data[" + k + "]:", retInfos["User Data[" + k + "]:"].ToString());
+					
+					if ( retInfos["User Data[" + k + "]:"].ToString().IndexOf("DivX") == 0 &&					   
+					     retInfos["User Data[" + k + "]:"].ToString().IndexOf("DivX999b000") < 0)
+					{
+						userDataToChange = retInfos["User Data[" + k + "]:"].ToString();
+						ChangeUserData.Sensitive=true;
+						Console.WriteLine("userDataToChange = " + userDataToChange);
+					}
+				}
+			}
 			
 			VideoTreeView.Model = informations;
 			
@@ -301,68 +315,30 @@ namespace monoSpotMain {
         	Gtk.Application.Quit();
         }
 		
-		[GLib.ConnectBefore]
-		private void on_VideoTreeView_press(object sender, ButtonPressEventArgs a)
-		{
-			
-			
-			Gdk.EventButton ev = a.Event;
-			
-			if (VideoTreeView.Model.IterNChildren() == 0)
-				return;
-			
-			TreeIter iter = new TreeIter();
-			if (VideoTreeView.Selection.GetSelected(out iter) != true) 
-				return;
-			
-			string info_name = (string)VideoTreeView.Model.GetValue(iter,0);
-			string info_value = (string)VideoTreeView.Model.GetValue(iter,1);
-			
-			if (a.Event.Button == 3 && 
-			    info_name.IndexOf("User Data")==0 && 
-			    info_value.IndexOf("DivX")==0 && 			    
-			    info_value.IndexOf("DivX999b000") < 0 )
-			{
-				
-				Console.WriteLine( info_name );
-				Console.WriteLine( info_value );
-				
-				// Verify if REC or IX?? are presents
-				if (rec_ix == true)
-				{
-					Gtk.MessageDialog NotProcessable = new MessageDialog(this.MonoSPOTWindow, 
-				                                     			   DialogFlags.DestroyWithParent, 
-				                                     			   MessageType.Warning,
-				                                     			   ButtonsType.Ok, 
-				                                     			   "Founded REC chunk or IX?? chunk. Export file is not possible");
-				
-					NotProcessable.Icon = Gdk.Pixbuf.LoadFromResource("monoSPOT.png");
-					NotProcessable.Title = "Save File";
-					NotProcessable.Run();				
-					NotProcessable.Destroy();
-					NotProcessable.Dispose();
-					NotProcessable = null;
-					return;
-				
-				}
-				
-				
-				userDataToChange = info_value;
-				
-				Glade.XML gui = new Glade.XML(null,"monoSPOT.glade","menu_UD",null);
-				menu_UD = (Gtk.Menu) gui["menu_UD"];
-				ImageMenuItem popmenuFileAdd = (Gtk.ImageMenuItem ) gui["menu_SaveFile"];
-				popmenuFileAdd.ButtonReleaseEvent += on_menu_SaveFile_button_release_event;
-				
-				this.menu_UD.Popup(null, null, null,ev.Button, ev.Time);
-				this.menu_UD.ShowAll();
-			}
-
-			return;
-		}
 		
-		private void on_menu_SaveFile_button_release_event(object sender, ButtonReleaseEventArgs a)
+		private void on_ChangeUserData_clicked(object sender, EventArgs a)
 		{
+			
+			// Verify if REC or IX?? are presents
+			if (rec_ix == true)
+			{
+				Gtk.MessageDialog NotProcessable = new MessageDialog(this.MonoSPOTWindow, 
+			                                     			   DialogFlags.DestroyWithParent, 
+			                                     			   MessageType.Warning,
+			                                     			   ButtonsType.Ok, 
+			                                     			   "Founded REC chunk or IX?? chunk. Export file is not possible");
+			
+				NotProcessable.Icon = Gdk.Pixbuf.LoadFromResource("monoSPOT.png");
+				NotProcessable.Title = "Save File";
+				NotProcessable.Run();				
+				NotProcessable.Destroy();
+				NotProcessable.Dispose();
+				NotProcessable = null;
+				return;
+			
+			}
+		
+			// Open Save Window
 			SaveWindow = new monoSPOTwait(ref this.MonoSPOTWindow, 
 			                              FilenameChooser.Filename,
 			                              moviOffset,
@@ -373,7 +349,10 @@ namespace monoSpotMain {
 			                              userDataToChange);
 			SaveWindow.callBackFunction += this.callBackValues;
 			SaveWindow.saveAvi();
+			
+			return;
 		}
+		
 		
 		// Export the scan result
 		private void on_ExportButton_clicked(object sender,EventArgs a)
