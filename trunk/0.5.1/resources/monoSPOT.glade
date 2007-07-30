@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.0.2 on Mon Jul 30 12:03:17 2007 by NBasile@NTEST0W-->
+<!--Generated with glade3 3.0.2 on Mon Jul 30 12:18:05 2007 by NBasile@NTEST0W-->
 <glade-interface>
   <widget class="GtkWindow" id="MonoSPOTWindow">
     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
@@ -270,162 +270,168 @@
               </widget>
             </child>
             <child>
-              <widget class="GtkHButtonBox" id="hbuttonbox1">
+              <widget class="GtkAlignment" id="alignment6">
                 <property name="visible">True</property>
-                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                <property name="spacing">6</property>
-                <property name="layout_style">GTK_BUTTONBOX_END</property>
+                <property name="left_padding">30</property>
                 <child>
-                  <widget class="GtkButton" id="ExportButton">
+                  <widget class="GtkHButtonBox" id="hbuttonbox1">
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                    <property name="use_stock">True</property>
-                    <property name="tooltip" translatable="yes">Save report as text file</property>
-                    <signal name="clicked" handler="on_ExportButton_clicked"/>
+                    <property name="spacing">6</property>
+                    <property name="layout_style">GTK_BUTTONBOX_END</property>
                     <child>
-                      <widget class="GtkHBox" id="hbox6">
+                      <widget class="GtkButton" id="ExportButton">
                         <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="use_stock">True</property>
+                        <property name="tooltip" translatable="yes">Save report as text file</property>
+                        <signal name="clicked" handler="on_ExportButton_clicked"/>
                         <child>
-                          <widget class="GtkImage" id="image1">
+                          <widget class="GtkHBox" id="hbox6">
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="stock">gtk-edit</property>
+                            <child>
+                              <widget class="GtkImage" id="image1">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="stock">gtk-edit</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label7">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="label" translatable="yes">_Export</property>
+                                <property name="use_underline">True</property>
+                                <property name="mnemonic_widget">ExportButton</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </widget>
-                        </child>
-                        <child>
-                          <widget class="GtkLabel" id="label7">
-                            <property name="visible">True</property>
-                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="label" translatable="yes">_Export</property>
-                            <property name="use_underline">True</property>
-                            <property name="mnemonic_widget">ExportButton</property>
-                          </widget>
-                          <packing>
-                            <property name="position">1</property>
-                          </packing>
                         </child>
                       </widget>
                     </child>
-                  </widget>
-                </child>
-                <child>
-                  <widget class="GtkButton" id="Change4ccButton">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                    <property name="use_stock">True</property>
-                    <property name="tooltip" translatable="yes">Change FourCC value and description</property>
-                    <signal name="clicked" handler="on_Change4ccButton_clicked"/>
                     <child>
-                      <widget class="GtkHBox" id="hbox8">
+                      <widget class="GtkButton" id="Change4ccButton">
                         <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="use_stock">True</property>
+                        <property name="tooltip" translatable="yes">Change FourCC value and description</property>
+                        <signal name="clicked" handler="on_Change4ccButton_clicked"/>
                         <child>
-                          <widget class="GtkImage" id="image4">
+                          <widget class="GtkHBox" id="hbox8">
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="stock">gtk-find-and-replace</property>
+                            <child>
+                              <widget class="GtkImage" id="image4">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="stock">gtk-find-and-replace</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label6">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="label" translatable="yes">_FourCC</property>
+                                <property name="use_underline">True</property>
+                                <property name="mnemonic_widget">Change4ccButton</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </widget>
-                        </child>
-                        <child>
-                          <widget class="GtkLabel" id="label6">
-                            <property name="visible">True</property>
-                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="label" translatable="yes">_FourCC</property>
-                            <property name="use_underline">True</property>
-                            <property name="mnemonic_widget">Change4ccButton</property>
-                          </widget>
-                          <packing>
-                            <property name="position">1</property>
-                          </packing>
                         </child>
                       </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
                     </child>
-                  </widget>
-                  <packing>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="GtkButton" id="ChangeUserData">
-                    <property name="visible">True</property>
-                    <property name="sensitive">False</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                    <property name="use_stock">True</property>
-                    <property name="tooltip" translatable="yes">Save file with standard UserData value (DivX999b000p)</property>
-                    <signal name="clicked" handler="on_ChangeUserData_clicked"/>
                     <child>
-                      <widget class="GtkHBox" id="hbox9">
+                      <widget class="GtkButton" id="ChangeUserData">
                         <property name="visible">True</property>
+                        <property name="sensitive">False</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <property name="use_stock">True</property>
+                        <property name="tooltip" translatable="yes">Save file with standard UserData value (DivX999b000p)</property>
+                        <signal name="clicked" handler="on_ChangeUserData_clicked"/>
                         <child>
-                          <widget class="GtkImage" id="image5">
+                          <widget class="GtkHBox" id="hbox9">
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="stock">gtk-save-as</property>
+                            <child>
+                              <widget class="GtkImage" id="image5">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="stock">gtk-save-as</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label9">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="label" translatable="yes">_UserData</property>
+                                <property name="use_underline">True</property>
+                                <property name="mnemonic_widget">ChangeUserData</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </widget>
-                        </child>
-                        <child>
-                          <widget class="GtkLabel" id="label9">
-                            <property name="visible">True</property>
-                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="label" translatable="yes">_UserData</property>
-                            <property name="use_underline">True</property>
-                            <property name="mnemonic_widget">ChangeUserData</property>
-                          </widget>
-                          <packing>
-                            <property name="position">1</property>
-                          </packing>
                         </child>
                       </widget>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
                     </child>
-                  </widget>
-                  <packing>
-                    <property name="position">2</property>
-                  </packing>
-                </child>
-                <child>
-                  <widget class="GtkButton" id="RescanButton">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                    <signal name="clicked" handler="RescanButton_clicked_cb"/>
                     <child>
-                      <widget class="GtkHBox" id="hbox7">
+                      <widget class="GtkButton" id="RescanButton">
                         <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                        <signal name="clicked" handler="RescanButton_clicked_cb"/>
                         <child>
-                          <widget class="GtkImage" id="image3">
+                          <widget class="GtkHBox" id="hbox7">
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="stock">gtk-refresh</property>
+                            <child>
+                              <widget class="GtkImage" id="image3">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="stock">gtk-refresh</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="label8">
+                                <property name="visible">True</property>
+                                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                                <property name="label" translatable="yes">_Rescan</property>
+                                <property name="use_underline">True</property>
+                                <property name="mnemonic_widget">RescanButton</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </widget>
-                        </child>
-                        <child>
-                          <widget class="GtkLabel" id="label8">
-                            <property name="visible">True</property>
-                            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="label" translatable="yes">_Rescan</property>
-                            <property name="use_underline">True</property>
-                            <property name="mnemonic_widget">RescanButton</property>
-                          </widget>
-                          <packing>
-                            <property name="position">1</property>
-                          </packing>
                         </child>
                       </widget>
+                      <packing>
+                        <property name="position">3</property>
+                      </packing>
                     </child>
                   </widget>
-                  <packing>
-                    <property name="position">3</property>
-                  </packing>
                 </child>
               </widget>
               <packing>
