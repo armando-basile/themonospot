@@ -442,10 +442,12 @@ namespace monoSpotMain {
 		// Write the parameters in a config file.
 		public void writeConfigurationFile(ref configurationClass theConfigClass)
 		{
-			string myConfigFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location.ToString();
-			       myConfigFilePath = myConfigFilePath.Replace(System.IO.Path.GetFileName(myConfigFilePath), "");
+			string myConfigFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + Path.DirectorySeparatorChar.ToString();
+			// string myConfigFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location.ToString();
+			//       myConfigFilePath = myConfigFilePath.Replace(System.IO.Path.GetFileName(myConfigFilePath), "");
 			
 			string filename = myConfigFilePath + "configuration.xml";
+			Console.WriteLine("myConfigFilePath = " + myConfigFilePath);
 			
 			SoapFormatter formatter = new SoapFormatter();
 			using (FileStream file = new FileStream(filename, FileMode.Create, FileAccess.Write))
@@ -461,10 +463,12 @@ namespace monoSpotMain {
 		// Read the parameters in a config file
 		public void readConfigurationFile(ref configurationClass theConfigClass)
 		{
-			string myConfigFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location.ToString();
-			       myConfigFilePath = myConfigFilePath.Replace(System.IO.Path.GetFileName(myConfigFilePath), "");
+			string myConfigFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + Path.DirectorySeparatorChar.ToString();
+			// string myConfigFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location.ToString();
+			//        myConfigFilePath = myConfigFilePath.Replace(System.IO.Path.GetFileName(myConfigFilePath), "");
 			
 			string filename = myConfigFilePath + "configuration.xml";
+			Console.WriteLine("myConfigFilePath = " + myConfigFilePath);
 			
 			if (File.Exists(filename) == false)
 			{	

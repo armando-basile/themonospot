@@ -1,5 +1,5 @@
-<Combine name="themonospot" fileversion="2.0">
-  <Configurations active="Debug">
+<Combine releaseversion="0.5.1" name="themonospot" fileversion="2.0" description="Avi parser and content descriptor" outputpath="./build/bin/">
+  <Configurations active="Release">
     <Configuration name="Debug" ctype="CombineConfiguration">
       <Entry build="True" name="themonospot" configuration="Debug" />
     </Configuration>
