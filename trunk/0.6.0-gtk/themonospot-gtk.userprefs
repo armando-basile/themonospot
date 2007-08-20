@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<UserCombinePreferences filename="/mnt/win_e/C#/themonospot-gtk/themonospot-gtk.mds">
+  <Files>
+    <File filename="./themonospot-gui/src/ui/tmsMAIN.cs" />
+    <File filename="./themonospot-base/src/components/clsThemonospotBase.cs" />
+    <File filename="./themonospot-base/src/components/clsParser.cs" />
+    <File filename="./themonospot-gui/src/ui/tmsWAIT.cs" />
+  </Files>
+  <Views>
+    <ViewMemento Id="MonoDevelop.Ide.Gui.Pads.ProjectPad">
+      <TreeView>
+        <Node expanded="True">
+          <Node name="themonospot-base" expanded="True">
+            <Node name="themonospot-base" expanded="True">
+              <Node name="src" expanded="True">
+                <Node name="components" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+          <Node name="themonospot-gui" expanded="True">
+            <Node name="themonospot-gui" expanded="True">
+              <Node name="src" expanded="True">
+                <Node name="ui" expanded="True">
+                  <Node name="tmsWAIT.cs" expanded="False" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </Node>
+      </TreeView>
+    </ViewMemento>
+    <ViewMemento Id="MonoDevelop.Ide.Gui.Pads.ClassPad">
+      <TreeView>
+        <Node expanded="False" />
+      </TreeView>
+    </ViewMemento>
+    <ViewMemento Id="MonoQuery.DatabasePad">
+      <TreeView>
+        <Node expanded="False" />
+      </TreeView>
+    </ViewMemento>
+    <ViewMemento Id="MonoDevelop.NUnit.TestPad">
+      <TreeView>
+        <Node expanded="True" />
+      </TreeView>
+    </ViewMemento>
+  </Views>
+  <Properties>
+    <Properties>
+      <Property key="ActiveConfiguration" value="Debug" />
+      <Property key="ActiveWindow" value="/mnt/win_e/C#/themonospot-gtk/themonospot-gui/src/ui/tmsWAIT.cs" />
+    </Properties>
+  </Properties>
+</UserCombinePreferences>
