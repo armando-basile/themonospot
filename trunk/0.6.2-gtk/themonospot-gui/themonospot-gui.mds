@@ -1,0 +1,16 @@
+<Combine releaseversion="0.1.0" name="themonospot-gui" fileversion="2.0" description="Gtk-Sharp gui for themonospot solution" outputpath="build/bin/">
+  <Configurations active="Release">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="themonospot-gui" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="themonospot-gui" configuration="Release" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="themonospot-gui" single="True">
+    <Execute type="None" entry="themonospot-gui" />
+  </StartMode>
+  <Entries>
+    <Entry filename="themonospot-gui.mdp" />
+  </Entries>
+</Combine>

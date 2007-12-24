@@ -1,0 +1,44 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{6266B1E9-6B30-431F-AFAD-9990879B6ED9}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>themonospot-base</AssemblyName>
+    <StartArguments>%24{TargetPath}</StartArguments>
+    <StartWorkingDirectory>%24{TargetDir}</StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <StartAction>Program</StartAction>
+    <StartProgram>..\..\..\Program Files\Mono-1.2.4\bin\mono.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <StartAction>Program</StartAction>
+    <StartProgram>..\..\..\Program Files\Mono-1.2.4\bin\mono.exe</StartProgram>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\components" />
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\components\clsAviStructures.cs" />
+    <Compile Include="src\components\clsConfiguration.cs" />
+    <Compile Include="src\components\clsEncoding.cs" />
+    <Compile Include="src\components\clsParser.cs" />
+    <Compile Include="src\components\clsThemonospotBase.cs" />
+  </ItemGroup>
+</Project>
