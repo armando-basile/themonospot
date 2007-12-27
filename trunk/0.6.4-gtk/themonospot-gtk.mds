@@ -1,0 +1,21 @@
+<Combine releaseversion="0.6.4" name="themonospot" fileversion="2.0" description="Avi parser/editor and content descriptor (with gtk-sharp gui)" outputpath="build/bin/">
+  <Configurations active="Release">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="themonospot-gui" configuration="Debug" />
+      <Entry build="True" name="themonospot-base" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="themonospot-gui" configuration="Release" />
+      <Entry build="True" name="themonospot-base" configuration="Release" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="themonospot-gui" single="True">
+    <Execute type="None" entry="themonospot-gui" />
+    <Execute type="None" entry="themonospot-base" />
+  </StartMode>
+  <MonoDevelop.ChangeLogAddIn.ChangeLogInfo policy="UpdateNearestChangeLog" />
+  <Entries>
+    <Entry filename="themonospot-gui/themonospot-gui.mds" />
+    <Entry filename="themonospot-base/themonospot-base.mds" />
+  </Entries>
+</Combine>
