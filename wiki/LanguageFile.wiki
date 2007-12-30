@@ -32,5 +32,6 @@ Gtk language = English; Available language = English
 }}}
 
 If you have a _<Gtk language>.ls_ file in your Themonospot _languages_ folder, the application already select it as language file.
+=  =
 Otherwise you can create a new text file with name _<Gtk language>.ls_ in your Themonospot _languages_ folder.
 After copy and paste _KEYS NAME_ in this file from other language file and complete it with _KEYS VALUE_ in your language 
