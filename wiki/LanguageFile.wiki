@@ -5,12 +5,32 @@
 
 = Use language files =
 
-Add your content here.
+From release 0.6.4 Themonospot support language files. Are text files containing rows of follow type:
+ KEY=_Value_
+their names are equal to _<language_name>_.*ls* and you can find them:
+ * *On Linux*: in the folder /usr/lib/themonospot/languages
+ * *On Windows*: in the folder _<application_path>\languages_
+Themonospot select automatically language file to use by user language configured. If there isn't a language file named as user language configured, select English.ls language file as default.
 
+=  =
+= Modify language file =
+To modify an existent language file you need only write/update access at _*languages*_ folder and can do it with a text editor (gedit, kwrite, kate, notepad, wordpad, etc.).
 
-= Add or modify =
+=  =
+= Add new language file =
+To add a language file for your user language configured you need:
+ # write/update access at _*languages*_ folder
+ # know your user language exact name (_English_ is different from _english_) on your system
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+To detect fastly your user language name you can lunch Themonospot from a shell in _DEBUG MODE_:
+{{{
+mono --debug <application_path>/themonospot.exe
+}}}
+so you can read the shell message that report this information:
+{{{
+Gtk language = English; Available language = English
+}}}
+
+If you have a _<Gtk language>.ls_ file in your Themonospot _languages_ folder, the application already select it as language file.
+Otherwise you can create a new text file with name _<Gtk language>.ls_ in your Themonospot _languages_ folder.
+After copy and paste _KEYS NAME_ in this file from other language file and complete it with _KEYS VALUE_ in your language 
