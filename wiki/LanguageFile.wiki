@@ -1,13 +1,12 @@
 #summary How add or modify language files for Themonospot.
 #labels Featured,Phase-Deploy
 
-[http://www.integrazioneweb.com/themonospot/ http://www.integrazioneweb.com/themonospot/images/themonospot_48.png]
-
+[http://www.integrazioneweb.com/themonospot/ http://www.integrazioneweb.com/themonospot/images/themonospot_32.png]
 = Use language files =
 
 Add your content here.
 
-
+[http://www.integrazioneweb.com/themonospot/ http://www.integrazioneweb.com/themonospot/images/themonospot_32.png]
 = Add or modify =
 
 Add your content here.  Format your content with:
