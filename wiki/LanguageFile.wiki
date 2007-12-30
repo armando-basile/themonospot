@@ -1,0 +1,14 @@
+#labels Featured,Phase-Deploy
+How add or modify language files for Themonospot.
+
+= Use language files =
+
+Add your content here.
+
+
+= Add or modify =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
