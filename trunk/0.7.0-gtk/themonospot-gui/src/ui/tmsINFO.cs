@@ -47,8 +47,15 @@ namespace themonospot_Gui_Main
 			lblInfo.Markup = "realized by hman (hmandevteam@gmail.com)" + Environment.NewLine + 
 			                 "and cjg (cjg@cruxppc.org) to scan avi files" + Environment.NewLine + 
 			                 "and extract audio and video informations. " + Environment.NewLine + 
-				             "special thanks to moitah (moitah@yahoo.com)";
-			infoWindow.HeightRequest = 360;
+				             "special thanks to moitah (moitah@yahoo.com)" + Environment.NewLine +
+				             "---" + Environment.NewLine +
+				             "thanks also to:" + Environment.NewLine +
+				             "rayden (raydenbest@gmail.com)" + Environment.NewLine +
+				             "insomniac (insomniac@slackware.it)" + Environment.NewLine +
+				             "mubumba (mubumba@gmail.com)" + Environment.NewLine  + Environment.NewLine +
+				             "irc contact" + Environment.NewLine +
+				             "irc.eu.azzurra.net   #mono" + Environment.NewLine ;
+			//infoWindow.HeightRequest = 360;
 			infoWindow.Run();		 
 			infoWindow.Destroy();		
 			return;		
