@@ -87,7 +87,7 @@ namespace themonospot_Base_Main
 		public static string FCCCODE 		{	get	{ return _4CCCODE;			} }
 		public static string FCCDESC 		{	get	{ return _4CCDESC;			} }
 		
-		public static string LanguageName = "";				// Gnome Language
+		public static string LanguageName = "";				// System Language
 		public static string LanguageSet = "";				// Available Language
 
 		/// <summary>

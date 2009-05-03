@@ -1,0 +1,5 @@
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsLanguages.cs: * fixed issue n. 13 - wrong
+	language setting
+

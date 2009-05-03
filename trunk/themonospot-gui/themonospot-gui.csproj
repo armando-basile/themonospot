@@ -127,13 +127,13 @@
     <EmbeddedResource Include="resources\waitWindow.glade">
       <LogicalName>waitWindow.glade</LogicalName>
     </EmbeddedResource>
-    <None Include="languages\English.lf">
+    <None Include="languages\english.lf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="languages\Italiano.lf">
+    <None Include="languages\italiano.lf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="languages\Spanish.lf">
+    <None Include="languages\spanish.lf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

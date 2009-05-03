@@ -40,7 +40,8 @@ namespace themonospot_Gui_Main {
 		string releaseGUI = "";
 		string releaseBASE = "";
 		static string StartUpError = "";
-		
+		string LOCALE_NATIVE_NAME = "";
+			
 		string userDataToChange = "";
 		bool rec_ix = false;
 		
@@ -54,9 +55,11 @@ namespace themonospot_Gui_Main {
 			Window.DefaultIcon = Gdk.Pixbuf.LoadFromResource("monoSPOT.png");
 			Glade.XML gxml =  new Glade.XML("monoSPOT.glade", "MonoSPOTWindow");
 			gxml.Autoconnect(this);
-			
-			Pango.Language myLanguage = Gtk.Global.DefaultLanguage;			
-			clsLanguages.LanguageName = myLanguage.SampleString.Substring(0, myLanguage.SampleString.IndexOf(" ")).Trim();
+
+			LOCALE_NATIVE_NAME = System.Globalization.CultureInfo.CurrentCulture.NativeName.ToLower();
+			LOCALE_NATIVE_NAME = LOCALE_NATIVE_NAME.Substring(0, LOCALE_NATIVE_NAME.IndexOf("(") - 1).Trim();
+				
+			clsLanguages.LanguageName = LOCALE_NATIVE_NAME;
 			StartUpError = clsLanguages.Init();
 			
 			if (StartUpError != "")
@@ -65,7 +68,7 @@ namespace themonospot_Gui_Main {
 				return;
 			}
 			
-			Console.WriteLine("Gtk language = " + clsLanguages.LanguageName + "; Available language = " + clsLanguages.LanguageSet);
+			Console.WriteLine("System language = " + clsLanguages.LanguageName + "\r\nAvailable language = " + clsLanguages.LanguageSet);
 			
 			// Filter for File Chooser
 			FileFilter filter = new Gtk.FileFilter();

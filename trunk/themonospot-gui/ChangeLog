@@ -1,0 +1,12 @@
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsMAIN.cs:
+	* languages/spanish.lf:
+	* languages/English.lf:
+	* languages/english.lf:
+	* languages/Spanish.lf:
+	* languages/Italiano.lf:
+	* languages/italiano.lf:
+	* themonospot-gui.csproj: * fixed issue n. 13 - wrong language
+	setting
+
