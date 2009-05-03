@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{B29F2DDC-78BC-45BF-8EC0-6E833B094825}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>themonospot</AssemblyName>
+    <ApplicationIcon>resources\monoSPOT.ico</ApplicationIcon>
+    <StartArguments>%24{TargetPath}</StartArguments>
+    <StartWorkingDirectory>%24{TargetDir}</StartWorkingDirectory>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\Mono-1.9.1\bin\mono.exe</StartProgram>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\Mono-1.9.1\bin\mono.exe</StartProgram>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <WarningLevel>3</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(SharpDevelopBinPath)\SharpDevelop.Build.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="atk-sharp">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="gdk-sharp">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="glade-sharp">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="glib-sharp">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="gtk-sharp">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="pango-sharp">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\ui\tms4CC.cs" />
+    <Compile Include="src\ui\tmsINFO.cs" />
+    <Compile Include="src\ui\tmsMAIN.cs" />
+    <Compile Include="src\ui\tmsWAIT.cs" />
+    <ProjectReference Include="..\themonospot-base\themonospot-base.csproj">
+      <Project>{6266B1E9-6B30-431F-AFAD-9990879B6ED9}</Project>
+      <Name>themonospot-base</Name>
+    </ProjectReference>
+    <EmbeddedResource Include="resources\ChangeFourCCwin.glade">
+      <LogicalName>ChangeFourCCwin.glade</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\infowin.glade">
+      <LogicalName>infowin.glade</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\monologo.png">
+      <LogicalName>monologo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\monoSPOT.glade">
+      <LogicalName>monoSPOT.glade</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\monoSPOT.ico">
+      <LogicalName>monoSPOT.ico</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\monoSPOT.png">
+      <LogicalName>monoSPOT.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\monoSPOT_16.png">
+      <LogicalName>monoSPOT_16.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\monoSPOT_48.png">
+      <LogicalName>monoSPOT_48.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\sound.png">
+      <LogicalName>sound.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\textfile.png">
+      <LogicalName>textfile.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\video.png">
+      <LogicalName>video.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\video_mini.png">
+      <LogicalName>video_mini.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\waitWindow.glade">
+      <LogicalName>waitWindow.glade</LogicalName>
+    </EmbeddedResource>
+    <None Include="languages\English.lf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="languages\Italiano.lf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="languages\Spanish.lf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <StandardHeader inheritsSet="GPLv2License" />
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>
