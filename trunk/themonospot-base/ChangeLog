@@ -1,5 +1,14 @@
 2009-05-03  Armando Basile  <hmandevteam@gmail.com>
 
+	* src/components/clsConfiguration.cs:
+	* src/components/clsThemonospotBase.cs: 
+
+	- fixed issue n. 10 - added auto-report 
+	  feature (default=false, to enable 
+	  set true in config file .themonospot)
+
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
 	* src/components/clsLanguages.cs: * fixed issue n. 13 - wrong
 	language setting
 

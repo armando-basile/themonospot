@@ -9,6 +9,7 @@ namespace themonospot_Base_Main
 	{
 		
 		string my_defaultPath;
+		bool _autoReport;
 		
 		public clsConfiguration()
 		{
@@ -19,6 +20,13 @@ namespace themonospot_Base_Main
         	get { return my_defaultPath; }
         	set { my_defaultPath = value; }
         }
+		
+		public bool autoReport
+        {
+        	get { return _autoReport; }
+        	set { _autoReport = value; }
+        }
+		
 		
 	}
 }

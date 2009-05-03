@@ -1,5 +1,13 @@
 2009-05-03  Armando Basile  <hmandevteam@gmail.com>
 
+	* src/ui/tmsMAIN.cs: 
+
+	- fixed issue n. 10 - added auto-report 
+	  feature (default=false, to enable 
+	  set true in config file .themonospot)
+
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
 	* src/ui/tmsMAIN.cs:
 	* languages/spanish.lf:
 	* languages/English.lf:

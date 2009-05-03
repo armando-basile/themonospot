@@ -78,6 +78,9 @@ namespace themonospot_Base_Main
 		public string defaultPath
 		{	get	{	return settingsClass.defaultPath;}	}
 		
+		public bool autoReport
+		{	get	{	return settingsClass.autoReport;}	}
+		
 		
 		public bool rec_ix
 		{   get { return _rec_ix; }   }
@@ -118,7 +121,8 @@ namespace themonospot_Base_Main
 		// Write the parameters in a config file.
 		private void writeConfigurationFile(ref clsConfiguration theConfigClass)
 		{
-			Console.WriteLine("myConfigFilePath = " + myConfigFilePath);			
+			Console.WriteLine("myConfigFilePath = " + myConfigFilePath);
+			Console.WriteLine("autoReport = " + autoReport.ToString());
 			string filename = myConfigFilePath + ".themonospot";
 			
 			XmlSerializer formatter = new XmlSerializer(typeof(clsConfiguration));
@@ -144,8 +148,6 @@ namespace themonospot_Base_Main
 		private void readConfigurationFile(ref clsConfiguration theConfigClass)
 		{
 			bool toDelete = false;
-			
-			Console.WriteLine("myConfigFilePath = " + myConfigFilePath);
 			string filename = myConfigFilePath + ".themonospot";
 			
 			if (File.Exists(filename) == false)
@@ -155,6 +157,8 @@ namespace themonospot_Base_Main
 				
 				// Create new parameters
 				theConfigClass.defaultPath = "";
+				theConfigClass.autoReport = false;
+				
 				return;
 			}
 			
