@@ -79,7 +79,13 @@ namespace themonospot_Base_Main
 		{	get	{	return settingsClass.defaultPath;}	}
 		
 		public bool autoReport
-		{	get	{	return settingsClass.autoReport;}	}
+		{	get	{	return settingsClass.autoReport;}	
+			set	
+				{
+					settingsClass.autoReport = value;
+					writeConfigurationFile(ref settingsClass);
+				}
+		}
 		
 		
 		public bool rec_ix

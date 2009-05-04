@@ -1,3 +1,14 @@
+2009-05-04  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsMAIN.cs:
+	* languages/english.lf:
+	* languages/spanish.lf:
+	* languages/italiano.lf:
+	* resources/monoSPOT.glade: 
+
+	- added control to manage auto-export feature setting
+	- modified language files to add auto-export tag
+
 2009-05-03  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/ui/tmsMAIN.cs: 

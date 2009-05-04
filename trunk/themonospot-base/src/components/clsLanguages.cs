@@ -51,6 +51,7 @@ namespace themonospot_Base_Main
 		private static string _4CCINFO = "";
 		private static string _4CCCODE = "";
 		private static string _4CCDESC = "";
+		private static string _AUTOEXPORT = "";
 				
 		public static string DESCFILE 		{	get	{ return _DESCFILE;			} }
 		public static string LBLFILE 		{	get	{ return _LBLFILE;			} }
@@ -86,6 +87,7 @@ namespace themonospot_Base_Main
 		public static string FCCINFO 		{	get	{ return _4CCINFO;			} }
 		public static string FCCCODE 		{	get	{ return _4CCCODE;			} }
 		public static string FCCDESC 		{	get	{ return _4CCDESC;			} }
+		public static string AUTOEXPORT		{	get	{ return _AUTOEXPORT;		} }
 		
 		public static string LanguageName = "";				// System Language
 		public static string LanguageSet = "";				// Available Language
@@ -188,6 +190,8 @@ namespace themonospot_Base_Main
 						{	_4CCCODE = theLine.Substring(8);	}
 						else if (theLine.IndexOf("4CCDESC=") == 0)
 						{	_4CCDESC = theLine.Substring(8);	}
+						else if (theLine.IndexOf("AUTOEXPORT=") == 0)
+						{	_AUTOEXPORT = theLine.Substring(11);	}
 
 						
 					}

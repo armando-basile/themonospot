@@ -1,3 +1,11 @@
+2009-05-04  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsLanguages.cs:
+	* src/components/clsThemonospotBase.cs: 
+
+	- added control to manage auto-export feature setting
+	- modified language files to add auto-export tag
+
 2009-05-03  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/components/clsConfiguration.cs:

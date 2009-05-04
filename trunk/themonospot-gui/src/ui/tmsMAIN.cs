@@ -13,25 +13,26 @@ namespace themonospot_Gui_Main {
 
 	public class tmsMAIN {
 		
-		[Glade.Widget]			Window MonoSPOTWindow;
-		[Glade.Widget]			FileChooserButton FilenameChooser;
-		[Glade.Widget]			Button ExportButton;
-		[Glade.Widget]			Button infoButton;
-		[Glade.Widget]			Button ChangeUserData;
-		[Glade.Widget]			Button Change4ccButton;
-		[Glade.Widget]			Image VideoImage;
-		[Glade.Widget]			Image AudioImage;
-		[Glade.Widget]			TreeView VideoTreeView;
-		[Glade.Widget]			TreeView AudioTreeView;
-		[Glade.Widget]			Label lblAvi;
-		[Glade.Widget]			Label lblFile;
-		[Glade.Widget]			Label lblAudioTop;
-		[Glade.Widget]			Label lblVideoTop;
-		[Glade.Widget]			Label lblAboutBT;
-		[Glade.Widget]			Label lblExportBT;
-		[Glade.Widget]			Label lblFourccBT;
-		[Glade.Widget]			Label lblUserdataBT;
-		[Glade.Widget]			Label lblRescanBT;
+		[Glade.Widget]			Window 				MonoSPOTWindow;
+		[Glade.Widget]			FileChooserButton 	FilenameChooser;
+		[Glade.Widget]			Button 				ExportButton;
+		[Glade.Widget]			Button 				infoButton;
+		[Glade.Widget]			Button 				ChangeUserData;
+		[Glade.Widget]			Button 				Change4ccButton;
+		[Glade.Widget]			Image 				VideoImage;
+		[Glade.Widget]			Image 				AudioImage;
+		[Glade.Widget]			TreeView 			VideoTreeView;
+		[Glade.Widget]			TreeView 			AudioTreeView;
+		[Glade.Widget]			Label 				lblAvi;
+		[Glade.Widget]			Label 				lblFile;
+		[Glade.Widget]			Label 				lblAudioTop;
+		[Glade.Widget]			Label 				lblVideoTop;
+		[Glade.Widget]			Label 				lblAboutBT;
+		[Glade.Widget]			Label 				lblExportBT;
+		[Glade.Widget]			Label 				lblFourccBT;
+		[Glade.Widget]			Label 				lblUserdataBT;
+		[Glade.Widget]			Label 				lblRescanBT;
+		[Glade.Widget]			CheckButton 		chkAutoExport;
 
 		
 		// monoSPOTwait SaveWindow;
@@ -88,6 +89,9 @@ namespace themonospot_Gui_Main {
 			filter.Name = "avi, divx, mkv, xvid files";
 			FilenameChooser.AddFilter(filter);
 			FilenameChooser.SelectionChanged += FilenameChooser_selection_changed_cb;
+			
+			chkAutoExport.Label = clsLanguages.AUTOEXPORT;
+			chkAutoExport.Active = baseObject.autoReport;
 			
 			VideoImage.FromPixbuf =	Gdk.Pixbuf.LoadFromResource("video.png");
 			AudioImage.FromPixbuf =	Gdk.Pixbuf.LoadFromResource("sound.png");
@@ -306,7 +310,12 @@ namespace themonospot_Gui_Main {
 		}
 		
 
-
+		private void on_chkAutoExport_clicked(object sender, EventArgs a)
+		{
+			baseObject.autoReport = chkAutoExport.Active;
+			
+		}
+		
 
 		// The on_MainWindow_Delete method is used when we want quit.
 		private void on_MainWindow_Delete(object sender,EventArgs a)
@@ -382,7 +391,7 @@ namespace themonospot_Gui_Main {
 			// Save File
 			DateTime Oggi = DateTime.Now; 
 			StreamWriter outputStream = new StreamWriter(ReportPath , false);
-			outputStream.WriteLine(("File:").PadRight(25)+ Path.GetFileName(ReportPath));
+			outputStream.WriteLine(("File:").PadRight(25)+ Path.GetFileName(FilenameChooser.Filename));
 			outputStream.WriteLine(("Analisys Date:").PadRight(25)+ Oggi.ToString("dd-MM-yyyy HH:mm:ss") );
 			outputStream.WriteLine("-----------------------------------------------------------------------------");
 	    	

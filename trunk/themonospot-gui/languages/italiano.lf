@@ -32,3 +32,4 @@ SAVEAS=Salva il file come...
 4CCINFO=Aggiorna di seguito il codice e la descrizione del FourCC:
 4CCCODE=Codice FourCC:
 4CCDESC=Descr. FourCC:
+AUTOEXPORT=autoesporta

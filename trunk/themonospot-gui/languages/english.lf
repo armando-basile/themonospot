@@ -32,3 +32,4 @@ SAVEAS=Save file as...
 4CCINFO=Update here FourCC Code value and FourCC Description value:
 4CCCODE=FourCC Code:
 4CCDESC=FourCC Descr:
+AUTOEXPORT=autoexport
