@@ -88,6 +88,7 @@ namespace themonospot_Gui_Main
 			
 			// Manage result of dialog box
 			FileBox.Icon = Gdk.Pixbuf.LoadFromResource("monoSPOT_16.png");
+			FileBox.SetCurrentFolder(baseObject.defaultPath);
 			int retFileBox = FileBox.Run();
 			if ((ResponseType)retFileBox == Gtk.ResponseType.Accept)
 			{	

@@ -1108,10 +1108,11 @@ namespace themonospot_Base_Main
 			// int totalFrameBytes = 0;
 			int totalFrameBytes, newFrameLength;
 			
+			
 			if (startPos >= 0)
 			{
 				// totalFrameBytes = tmpByteArray.Length - _udToChange.Length + 12;
-				newFrameLength = frameLength - _udToChange.Length + 12;
+				newFrameLength = (frameLength - _udToChange.Length) + 12;
 				
 				// Padded to an even number of bytes but make sure the padding isn't included
                 // in the size written to the chunk header or index
@@ -1121,13 +1122,19 @@ namespace themonospot_Base_Main
 					totalFrameBytes ++;
 				
 				// frameLength = totalFrameBytes;
-				frameLength = newFrameLength;
+				// frameLength = newFrameLength;
+				
 				
 				outByteArray = new byte[totalFrameBytes];
 				Array.Copy(tmpByteArray, outByteArray, startPos);
 				Array.Copy(TextEncoding.GetBytes("DivX999b000p"), 0, outByteArray, startPos, 12);
-				Array.Copy(tmpByteArray, startPos + _udToChange.Length , outByteArray, startPos + 12, frameLength - _udToChange.Length - startPos + 1);
+				Array.Copy(tmpByteArray, 
+				           startPos + _udToChange.Length , 
+				           outByteArray, 
+				           startPos + 12, 
+				           frameLength - (_udToChange.Length + startPos));
 				
+				frameLength = newFrameLength;
 			}
 			else
 				outByteArray = tmpByteArray;

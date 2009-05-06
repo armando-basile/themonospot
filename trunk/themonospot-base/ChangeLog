@@ -1,3 +1,9 @@
+2009-05-06  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsParserAVI.cs: 
+
+	- bug fixed - export with userdata changed improvement
+
 2009-05-04  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/components/clsLanguages.cs:
