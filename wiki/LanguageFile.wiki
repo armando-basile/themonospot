@@ -9,7 +9,7 @@ From release 0.6.4 Themonospot support language files. Are text files containing
  KEY=_Value_
 their names are equal to _(language_name)_.*ls* and you can find them:
  * *On Linux*: in the folder /usr/lib/themonospot/languages
- * *On Windows*: in the folder _<application_path>\languages_
+ * *On Windows*: in the folder _(application_path)\languages_
 Themonospot select automatically language file to use by user language configured. If there isn't a language file named as user language configured, select English.ls language file as default.
 
 =  =
@@ -31,7 +31,7 @@ so you can read the shell message that report this information:
 System language = English; Available language = English
 }}}
 
-If you have a _<Gtk language>.ls_ file in your Themonospot _languages_ folder, the application already select it as language file.
+If you have a _(system language).ls_ file in your Themonospot _languages_ folder, the application already select it as language file.
 
-Otherwise you can create a new text file with name _<Gtk language>.ls_ in your Themonospot _languages_ folder.
+Otherwise you can create a new text file with name _(system language).ls_ in your Themonospot _languages_ folder.
 After copy and paste _KEYS NAME_ in this file from other language file and complete it with _KEYS VALUE_ in your language.
