@@ -7,7 +7,7 @@
 
 From release 0.6.4 Themonospot support language files. Are text files containing rows of follow type:
  KEY=_Value_
-their names are equal to _<language_name>_.*ls* and you can find them:
+their names are equal to _(language_name)_.*ls* and you can find them:
  * *On Linux*: in the folder /usr/lib/themonospot/languages
  * *On Windows*: in the folder _<application_path>\languages_
 Themonospot select automatically language file to use by user language configured. If there isn't a language file named as user language configured, select English.ls language file as default.
@@ -24,7 +24,7 @@ To add a language file for your user language configured you need:
 
 To detect fastly your user language name you can lunch Themonospot from a shell in _DEBUG MODE_:
 {{{
-mono --debug <application_path>/themonospot.exe
+mono --debug (application_path)/themonospot.exe
 }}}
 so you can read the shell message that report this information:
 {{{
