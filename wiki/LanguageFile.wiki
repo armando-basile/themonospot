@@ -28,7 +28,7 @@ mono --debug <application_path>/themonospot.exe
 }}}
 so you can read the shell message that report this information:
 {{{
-Gtk language = English; Available language = English
+System language = English; Available language = English
 }}}
 
 If you have a _<Gtk language>.ls_ file in your Themonospot _languages_ folder, the application already select it as language file.
