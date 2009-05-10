@@ -136,6 +136,7 @@
     <None Include="languages\spanish.lf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="resources\themonospot.desktop" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

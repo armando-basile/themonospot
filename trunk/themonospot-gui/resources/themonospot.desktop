@@ -1,13 +1,11 @@
 [Desktop Entry]
-Encoding=UTF-8
-Name=themonospot
-GenericName=themonospot
-Comment=themonospot - Parser and content descriptor for .avi and .mkv files
-Icon=themonospot
-Exec=themonospot
 Categories=AudioVideo;AudioVideoEditing;GTK;GNOME;
-Name[it_IT]=themonospot
+Comment=themonospot - Parser and content descriptor for .avi and .mkv files
 Comment[it_IT]=themonospot - estrae informazioni da un file avi
+Exec=themonospot
+GenericName=themonospot
+Icon=themonospot
+Name=themonospot
+StartupNotify=true
 Terminal=false
 Type=Application
-StartupNotify=true

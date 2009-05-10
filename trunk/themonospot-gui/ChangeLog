@@ -1,3 +1,11 @@
+2009-05-10  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-gui.csproj:
+	* resources/themonospot.png:
+	* resources/themonospot.desktop: 
+
+	- add .desktop resources
+
 2009-05-06  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/ui/tmsWAIT.cs: 
