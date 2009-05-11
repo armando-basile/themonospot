@@ -150,4 +150,8 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Resource Include="..\copying.gpl" />
+    <Resource Include="..\readme" />
+  </ItemGroup>
 </Project>
