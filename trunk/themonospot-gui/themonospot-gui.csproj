@@ -137,6 +137,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="resources\themonospot.desktop" />
+    <EmbeddedResource Include="..\copying.gpl" />
+    <EmbeddedResource Include="..\readme" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
@@ -147,11 +149,8 @@
             <MessageStyle LineAlign="0" />
           </ChangeLogPolicy>
         </Policies>
+        <Deployment.LinuxDeployData scriptName="themonospot" />
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <ItemGroup>
-    <Resource Include="..\copying.gpl" />
-    <Resource Include="..\readme" />
-  </ItemGroup>
 </Project>

@@ -1,6 +1,12 @@
 2009-05-11  Armando Basile  <hmandevteam@gmail.com>
 
 	* themonospot-gui.csproj: 
+
+	- bug fixed: script name
+
+2009-05-11  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-gui.csproj: 
 	
 	- added doc files
 
