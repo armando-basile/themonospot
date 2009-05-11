@@ -1,5 +1,9 @@
 2009-05-11  Armando Basile  <hmandevteam@gmail.com>
 
+	* resources/themonospot.desktop: modified desktop file
+
+2009-05-11  Armando Basile  <hmandevteam@gmail.com>
+
 	* themonospot-gui.csproj: 
 
 	- bug fixed: script name
