@@ -550,9 +550,12 @@ namespace themonospot_Base_Main
 						Console.WriteLine("ISFTDATA ".PadRight(20,(char)46) + myEnc.getAsciiFromArray(tmpByteArray));
 						
 						// Check remaining byte 
-						if ((byteOfINFO - byteOfINFOReaded) < 8 )
+						if (byteOfINFO > byteOfINFOReaded)
+						{
 							aviStreamReader.Seek((byteOfINFO - byteOfINFOReaded), SeekOrigin.Current);
 							_m_posStream +=(byteOfINFO - byteOfINFOReaded);
+						}	
+						
 					}
 					else
 					{

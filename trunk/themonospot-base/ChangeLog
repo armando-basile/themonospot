@@ -1,3 +1,9 @@
+2009-05-14  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsParserAVI.cs: 
+
+	- bug fixed: LIST INFO scan bug
+
 2009-05-06  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/components/clsParserAVI.cs: 
