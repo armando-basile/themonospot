@@ -1,3 +1,9 @@
+2009-05-15  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsMAIN.cs: 
+
+	- added Drag and Drop feature
+
 2009-05-11  Armando Basile  <hmandevteam@gmail.com>
 
 	* resources/themonospot.desktop: modified desktop file

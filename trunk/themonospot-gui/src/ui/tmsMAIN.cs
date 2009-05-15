@@ -101,6 +101,21 @@ namespace themonospot_Gui_Main {
 			VideoTreeView.AppendColumn (clsLanguages.VCOL2NAME, new CellRendererText(), "text", 1);
 			VideoTreeView.Model = new Gtk.ListStore (typeof (string), typeof (string));
 			
+			// Drag And Drop feature
+			TargetEntry[] VtvD = new TargetEntry[]{
+				new TargetEntry("text/uri-list", 0, 0),
+				new TargetEntry("text/plain", 0, 1),
+				new TargetEntry("STRING", 0, 1)
+			};
+			Gtk.Drag.DestSet(MonoSPOTWindow, 
+			                 DestDefaults.All, VtvD, 
+			                 Gdk.DragAction.Copy | 
+			                 Gdk.DragAction.Move |
+			                 Gdk.DragAction.Link |
+			                 Gdk.DragAction.Ask);
+			MonoSPOTWindow.DragDataReceived += on_MainWindow_selection_received;
+
+			
 			AudioTreeView.AppendColumn (clsLanguages.ACOL1NAME, new CellRendererText(), "text", 0);
 			AudioTreeView.AppendColumn (clsLanguages.ACOL2NAME, new CellRendererText(), "text", 1);
 			AudioTreeView.Model = new Gtk.ListStore (typeof (string), typeof (string));
@@ -444,6 +459,33 @@ namespace themonospot_Gui_Main {
 			
 		}
 
+		public void on_MainWindow_selection_received(object sender, DragDataReceivedArgs InArgs)
+		{
+			Gtk.Widget source = Gtk.Drag.GetSourceWidget(InArgs.Context);
+			string Data = System.Text.Encoding.UTF8.GetString(InArgs.SelectionData.Data);
+			string DropFileName = "";
+						
+			Data = Data.Replace(@"file://", "");
+			int EndLine = Data.IndexOf(Environment.NewLine);
+			
+			if (EndLine >0)
+				Data = Data.Substring(0, Data.IndexOf(Environment.NewLine));
+			
+			Uri TheFile = new Uri(Data);
+			DropFileName = Path.GetFullPath(TheFile.LocalPath);
+			
+			if (!File.Exists(DropFileName))
+				return;
+			
+			FilenameChooser.SetFilename(DropFileName);
+			parseFile(DropFileName);
+			
+			Gtk.Drag.Finish(InArgs.Context,true, false, InArgs.Time);
+			
+			
+		}
+		
+		
 
 	}
 
