@@ -71,6 +71,7 @@
     <Compile Include="src\components\clsThemonospotBase.cs" />
     <Compile Include="src\components\IParser.cs" />
     <Compile Include="src\components\ParserException.cs" />
+    <Compile Include="src\components\SettingsManager.cs" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

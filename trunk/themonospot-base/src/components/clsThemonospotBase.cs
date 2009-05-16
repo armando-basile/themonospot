@@ -83,7 +83,7 @@ namespace themonospot_Base_Main
 			set	
 				{
 					settingsClass.autoReport = value;
-					writeConfigurationFile(ref settingsClass);
+					settingsClass.UpdateConfigFile(myConfigFilePath);
 				}
 		}
 		
@@ -102,9 +102,10 @@ namespace themonospot_Base_Main
 			else
 				myConfigFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + Path.DirectorySeparatorChar.ToString();
 			
+			myConfigFilePath += ".themonospot";
             settingsClass = new clsConfiguration();
 			
-			readConfigurationFile(ref settingsClass);		
+			settingsClass.ReadConfigFile(myConfigFilePath);		
 		}
 		
 		
@@ -125,74 +126,16 @@ namespace themonospot_Base_Main
 			
 		
 		// Write the parameters in a config file.
-		private void writeConfigurationFile(ref clsConfiguration theConfigClass)
+		private void writeConfigurationFile()
 		{
-			Console.WriteLine("myConfigFilePath = " + myConfigFilePath);
-			Console.WriteLine("autoReport = " + autoReport.ToString());
-			string filename = myConfigFilePath + ".themonospot";
-			
-			XmlSerializer formatter = new XmlSerializer(typeof(clsConfiguration));
-			using (FileStream file = File.OpenWrite(filename))
-  			{
-    			// Serializaion...
-    			try
-    			{
-    				formatter.Serialize(file, theConfigClass);    				
-    			}
-    			catch (Exception e)
-    			{
-    				Console.WriteLine("Serialization error: " + e.Message);
-    			}
-    			file.Close();
-			}			
-			
-			File.SetAttributes(filename, FileAttributes.Hidden);
+			settingsClass.UpdateConfigFile(myConfigFilePath);
 		}
 		
 
 		// Read the parameters in a config file
-		private void readConfigurationFile(ref clsConfiguration theConfigClass)
+		private void readConfigurationFile()
 		{
-			bool toDelete = false;
-			string filename = myConfigFilePath + ".themonospot";
-			
-			if (File.Exists(filename) == false)
-			{	
-				// If config file is missing
-				theConfigClass = new clsConfiguration();
-				
-				// Create new parameters
-				theConfigClass.defaultPath = "";
-				theConfigClass.autoReport = false;
-				
-				return;
-			}
-			
-			 
-			XmlSerializer formatter = new XmlSerializer(typeof(clsConfiguration));
-			using (FileStream fileconf = new FileStream(filename, FileMode.Open, FileAccess.Read))
-  			{
-    			// Deserializaion...
-    			try
-    			{
-    				theConfigClass = formatter.Deserialize(fileconf) as clsConfiguration;
-    			}
-    			catch (Exception e)
-    			{
-    				Console.WriteLine("Deserialization of config file error: " + e.Message);
-    				fileconf.Close();    				
-    				fileconf.Dispose();
-    				toDelete = true;
-    			}
-			}
-
-			if (toDelete == true)
-			{
-				StreamWriter clearer = new StreamWriter(filename,false);
-				clearer.Write("");
-				clearer.Close(); clearer.Dispose(); clearer = null;
-			}
-				
+			settingsClass.ReadConfigFile(myConfigFilePath);
 		}
 		
 		
@@ -278,7 +221,7 @@ namespace themonospot_Base_Main
 			
 
 			settingsClass.defaultPath = Path.GetDirectoryName(filename);
-			writeConfigurationFile(ref settingsClass);
+			writeConfigurationFile();
 			
 		    return true;
 		    
