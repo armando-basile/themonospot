@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{619B553D-11DF-4BCD-A28E-EFB9DCCD23F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>themonospot-plugin-mkv</AssemblyName>
+    <RootNamespace>ThemonospotPluginMkv</RootNamespace>
+    <Description>themonospot-base plugin to manage Matroska files</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp themonospot-plugin-* ../../../../themonospot-console/bin/Debug/plugins/themonospot-plugin-mkv/" workingdir="${TargetDir}" externalConsole="true" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
+        <Deployment.LinuxDeployData generatePcFile="false" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="properties\AssemblyInfo.cs" />
+    <Compile Include="src\PluginFactory.cs" />
+    <Compile Include="src\classes\MkvManager.cs" />
+    <Compile Include="src\classes\MkvTrackEntity.cs" />
+    <Compile Include="src\classes\MkvVideoEntity.cs" />
+    <Compile Include="src\classes\MkvAudioEntity.cs" />
+    <Compile Include="src\classes\MkvConstants.cs" />
+    <Compile Include="src\classes\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\themonospot-plugin-interface\themonospot-plugin-interface.csproj">
+      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
+      <Name>themonospot-plugin-interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

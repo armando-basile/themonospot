@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+	<language>
+		<DESCFILE>File da scansionare</DESCFILE>
+		<LBLFILE>Nome file:</LBLFILE>
+		<DESCVIDEO>Video</DESCVIDEO>
+		<VCOL1NAME>Informazione</VCOL1NAME>
+		<VCOL2NAME>Descrizione</VCOL2NAME>
+		<DESCAUDIO>Audio</DESCAUDIO>
+		<ACOL1NAME>Informazione</ACOL1NAME>
+		<ACOL2NAME>Descrizione</ACOL2NAME>
+		<ABOUTBT>_Info</ABOUTBT>
+		<EXPORTBT>_Esporta</EXPORTBT>
+		<FOURCCBT>_FourCC</FOURCCBT>
+		<UDATABT>_UserData</UDATABT>
+		<RESCANBT>_Rescan</RESCANBT>
+		<FCTITLE>Seleziona il file da scansionare</FCTITLE>
+		<TTTEXPORT>Salva il report in formato testo</TTTEXPORT>
+		<TTTFOURCC>Cambia il valore e la descrizione del FourCC</TTTFOURCC>
+		<TTTUDATA>Salva il file con un valore standard di UserData (DivX999b000p)</TTTUDATA>
+		<FOURCCSURE>Sei sicuro di voler aggiornare il file con i nuovi valori di FourCC ?</FOURCCSURE>
+		<FOURCCTITLE>Modifica dei valori FourCC</FOURCCTITLE>
+		<UDATAERROR>Trovata sezione REC o IX??. Impossibile procedere con il salvataggio del file</UDATAERROR>
+		<UDATATITLE>Salvataggio file</UDATATITLE>
+		<EXPORTTITLE>Inserisci il percorso dove esportare il report...</EXPORTTITLE>
+		<BTCANCEL>Annulla</BTCANCEL>
+		<BTACCEPT>Ok</BTACCEPT>
+		<EXPMESSAGE1>aggiornamento header file... attendere</EXPMESSAGE1>
+		<EXPMESSAGE2>aggiornamento dei contenuti... attendere</EXPMESSAGE2>
+		<EXPMESSAGE3>aggiornamento sezione MOVI... attendere</EXPMESSAGE3>
+		<EXPMESSAGE4>aggiornamento sezione IDX... attendere</EXPMESSAGE4>
+		<WAITTITLE>Salva file</WAITTITLE>
+		<SAVEAS>Salva il file come...</SAVEAS>
+		<FCCTITLE>Cambia il FourCC...</FCCTITLE>
+		<FCCINFO>Aggiorna di seguito il codice e la descrizione del FourCC:</FCCINFO>
+		<FCCCODE>Codice FourCC:</FCCCODE>
+		<FCCDESC>Descr. FourCC:</FCCDESC>
+		<AUTOEXPORT>autoesporta</AUTOEXPORT>
+	</language>
+</Settings>

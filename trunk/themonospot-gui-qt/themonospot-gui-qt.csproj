@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B444F5B-ED36-413D-9E2A-32B757885096}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>themonospot-gui-qt</AssemblyName>
+    <RootNamespace>ThemonospotGuiQt</RootNamespace>
+    <Description>Qt gui for themonospot-base</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
+        <Deployment.LinuxDeployData scriptName="themonospot-qt" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="properties\AssemblyInfo.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\qt_classes\ResManager.cs" />
+    <Compile Include="src\qt_classes\MainWindow.cs" />
+    <Compile Include="src\gui_classes\MainWindowClass.Designer.cs" />
+    <Compile Include="src\gui_classes\AboutDialogClass.cs" />
+    <Compile Include="src\classes\GlobalData.cs" />
+    <Compile Include="src\gui_classes\ScanningDialogClass.cs" />
+    <Compile Include="src\qt_classes\AboutDialog.cs" />
+    <Compile Include="src\qt_classes\ScanningDialog.cs" />
+    <Compile Include="src\classes\CancelScanEventHandler.cs" />
+    <Compile Include="src\classes\FileInfoEntity.cs" />
+    <Compile Include="src\classes\LanguageManager.cs" />
+    <Compile Include="src\classes\SettingsManager.cs" />
+    <Compile Include="src\gui_classes\MainWindowClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\gui_classes\" />
+    <Folder Include="src\classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="qt-dotnet, Version=4.5.0.0, Culture=neutral, PublicKeyToken=194a23ba31c08164" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\themonospot-base\themonospot-base.csproj">
+      <Project>{B28C190A-8FA1-4500-AC70-C244C8146A4D}</Project>
+      <Name>themonospot-base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\qt_files\MainWindow.ui" />
+    <None Include="src\qt_files\AboutDialog.ui" />
+    <None Include="src\qt_files\ScanningDialog.ui" />
+  </ItemGroup>
+</Project>
