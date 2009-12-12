@@ -1,0 +1,67 @@
+2009-05-15  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsMAIN.cs: 
+
+	- added Drag and Drop feature
+
+2009-05-11  Armando Basile  <hmandevteam@gmail.com>
+
+	* resources/themonospot.desktop: modified desktop file
+
+2009-05-11  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-gui.csproj: 
+
+	- bug fixed: script name
+
+2009-05-11  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-gui.csproj: 
+	
+	- added doc files
+
+2009-05-10  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-gui.csproj:
+	* resources/themonospot.png:
+	* resources/themonospot.desktop: 
+
+	- add .desktop resources
+
+2009-05-06  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsWAIT.cs: 
+
+	- bug fixed - export with userdata changed improvement
+
+2009-05-04  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsMAIN.cs:
+	* languages/english.lf:
+	* languages/spanish.lf:
+	* languages/italiano.lf:
+	* resources/monoSPOT.glade: 
+
+	- added control to manage auto-export feature setting
+	- modified language files to add auto-export tag
+
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsMAIN.cs: 
+
+	- fixed issue n. 10 - added auto-report 
+	  feature (default=false, to enable 
+	  set true in config file .themonospot)
+
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/ui/tmsMAIN.cs:
+	* languages/spanish.lf:
+	* languages/English.lf:
+	* languages/english.lf:
+	* languages/Spanish.lf:
+	* languages/Italiano.lf:
+	* languages/italiano.lf:
+	* themonospot-gui.csproj: * fixed issue n. 13 - wrong language
+	setting
+

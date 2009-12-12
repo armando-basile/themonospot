@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=AudioVideo;AudioVideoEditing;GTK;GNOME;
+Comment[it]=themonospot - estrae informazioni da un file avi o mkv
+Comment=themonospot - Parser and content descriptor for .avi and .mkv files
+Comment[it_IT]=themonospot - estrae informazioni da un file avi o mkv
+Exec=themonospot
+GenericName[it]=themonospot
+GenericName=themonospot
+Icon=themonospot
+MimeType=
+Name[it]=themonospot
+Name=themonospot
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

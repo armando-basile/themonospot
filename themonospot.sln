@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-base", "themonospot-base\themonospot-base.csproj", "{6266B1E9-6B30-431F-AFAD-9990879B6ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-gui", "themonospot-gui\themonospot-gui.csproj", "{B29F2DDC-78BC-45BF-8EC0-6E833B094825}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6266B1E9-6B30-431F-AFAD-9990879B6ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6266B1E9-6B30-431F-AFAD-9990879B6ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6266B1E9-6B30-431F-AFAD-9990879B6ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6266B1E9-6B30-431F-AFAD-9990879B6ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29F2DDC-78BC-45BF-8EC0-6E833B094825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29F2DDC-78BC-45BF-8EC0-6E833B094825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29F2DDC-78BC-45BF-8EC0-6E833B094825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29F2DDC-78BC-45BF-8EC0-6E833B094825}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		version = 0.7.3
+		StartupItem = themonospot-gui\themonospot-gui.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.StandardHeader = $2
+		$2.inheritsSet = GPLv2License
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.TabsToSpaces = False
+		$3.NoTabsAfterNonTabs = False
+		$3.RemoveTrailingWhitespace = False
+		$3.EolMarker = Native
+		$0.VersionControlPolicy = $4
+		$4.inheritsSet = Mono
+		$0.ChangeLogPolicy = $5
+		$5.UpdateMode = None
+		$5.MessageStyle = $6
+		$6.LineAlign = 0
+		$5.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal

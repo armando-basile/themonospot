@@ -1,0 +1,43 @@
+2009-05-16  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-base.csproj:
+	* src/components/SettingsManager.cs:
+	* src/components/clsConfiguration.cs:
+	* src/components/clsThemonospotBase.cs: 
+
+	* bug fixed: settings file management
+
+2009-05-14  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsParserAVI.cs: 
+
+	- bug fixed: LIST INFO scan bug
+
+2009-05-06  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsParserAVI.cs: 
+
+	- bug fixed - export with userdata changed improvement
+
+2009-05-04  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsLanguages.cs:
+	* src/components/clsThemonospotBase.cs: 
+
+	- added control to manage auto-export feature setting
+	- modified language files to add auto-export tag
+
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsConfiguration.cs:
+	* src/components/clsThemonospotBase.cs: 
+
+	- fixed issue n. 10 - added auto-report 
+	  feature (default=false, to enable 
+	  set true in config file .themonospot)
+
+2009-05-03  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/components/clsLanguages.cs: * fixed issue n. 13 - wrong
+	language setting
+
