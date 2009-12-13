@@ -70,6 +70,12 @@
     <None Include="languages\spanish.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="copying.gpl">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+    </None>
+    <None Include="readme">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\themonospot-plugin-interface\themonospot-plugin-interface.csproj">
