@@ -1,5 +1,15 @@
 2009-12-13  Armando Basile  <hmandevteam@gmail.com>
 
+	* readme:
+	* languages/spanish.xml:
+	* themonospot-base.pidb:
+	* themonospot-base.csproj: 
+
+	- added spanish language file
+	- bug fix: missing sign to release config of themonospot-base
+
+2009-12-13  Armando Basile  <hmandevteam@gmail.com>
+
 	* properties/AssemblyInfo.cs: 
 
 	- added sign to project file and removed from AssemblyInfo

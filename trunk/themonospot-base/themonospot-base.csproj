@@ -9,6 +9,7 @@
     <OutputType>Library</OutputType>
     <AssemblyName>themonospot-base</AssemblyName>
     <RootNamespace>ThemonospotBase</RootNamespace>
+    <Description>MONO/.Net component to parse/editor video files</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -3,14 +3,11 @@
   <MonoDevelop.Ide.DebuggingService>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../themonospot-gui-qt/src/gui_classes/MainWindowClass.cs" ctype="Workbench">
-    <Files>
-      <File FileName="../themonospot-gui-qt/src/gui_classes/MainWindowClass.cs" Line="398" Column="19" />
-      <File FileName="../themonospot-gui-qt/properties/AssemblyInfo.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench ctype="Workbench">
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
+          <Node name="themonospot-base" expanded="True" />
           <Node name="themonospot-gui-qt" expanded="True">
             <Node name="properties" expanded="True" />
             <Node name="src" expanded="True">
@@ -19,6 +16,13 @@
               </Node>
             </Node>
           </Node>
+          <Node name="themonospot-plugin-avi" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="classes" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="themonospot-plugin-interface" expanded="True" />
+          <Node name="themonospot-plugin-manager" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
