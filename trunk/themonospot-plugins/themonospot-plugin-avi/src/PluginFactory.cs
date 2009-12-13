@@ -157,7 +157,7 @@ namespace ThemonospotPluginAvi
 			((List<string[]>)vInfo).Add(
 				new string[] {"Average video bitrate:", am.AviContainer.VideoStreams[0].VideoBitrate} );
 			((List<string[]>)vInfo).Add(
-				new string[] {"File size:", ((am.AviContainer.DataSize + 8) / 1024).ToString("#,### KB")  } );
+				new string[] {"File size:", ((am.AviContainer.FileSize) / 1024).ToString("#,### KB")  } );
 			
 			
 			long ttime = (long)(am.AviContainer.VideoStreams[0].TotalTime / 1000000.0);

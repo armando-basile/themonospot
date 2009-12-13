@@ -169,6 +169,7 @@ namespace ThemonospotPluginAvi
 			uint fileType = utils.ReadDWord(ref ifs, ref streamPosition);
 			
 			_aviContainer.DataSize = (long)dataSize;
+			_aviContainer.FileSize = ifs.Length;
 			
 			if (_aviFileSize < (dataSize + 8))
 			{

@@ -17,6 +17,7 @@ namespace ThemonospotPluginAvi
 		List<string> _moviUserData = new List<string>();
 		bool _pBitstream = false;
 		long _dataSize = 0;
+		long _fileSize = 0;
 		long _moviSize = 0;
 		long _moviOffset = 0;
 		long _idxSize = 0;
@@ -81,6 +82,13 @@ namespace ThemonospotPluginAvi
 			get {return _dataSize;	}
 			set {_dataSize = value;	}
 		}
+
+		public long FileSize 
+		{
+			get {return _fileSize;	}
+			set {_fileSize = value;	}
+		}
+		
 		
 		public long MoviSize 
 		{
