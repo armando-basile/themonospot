@@ -1,11 +1,11 @@
 
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-base", "themonospot-base.csproj", "{B28C190A-8FA1-4500-AC70-C244C8146A4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-base", "themonospot-base\themonospot-base.csproj", "{B28C190A-8FA1-4500-AC70-C244C8146A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-interface", "..\themonospot-plugin-interface\themonospot-plugin-interface.csproj", "{3397AC59-BBD5-418B-8EED-3446035DF24E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-interface", "themonospot-plugin-interface\themonospot-plugin-interface.csproj", "{3397AC59-BBD5-418B-8EED-3446035DF24E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-manager", "..\themonospot-plugin-manager\themonospot-plugin-manager.csproj", "{45698D24-DCB0-4728-8EDB-C6DE0445156D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-manager", "themonospot-plugin-manager\themonospot-plugin-manager.csproj", "{45698D24-DCB0-4728-8EDB-C6DE0445156D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
