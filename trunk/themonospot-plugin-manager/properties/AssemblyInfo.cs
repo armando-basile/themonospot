@@ -23,4 +23,4 @@ using System.Runtime.CompilerServices;
 // if desired. See the Mono documentation for more information about signing.
 
 [assembly: AssemblyDelaySign(false)]
-[assembly: AssemblyKeyFile("themonospot-plugin-manager.snk")]
+//[assembly: AssemblyKeyFile("themonospot-plugin-manager.snk")]
