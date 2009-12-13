@@ -1,0 +1,2 @@
+	gacutil /u themonospot-base
+	rm -rf "$(DESTDIR)$(programfilesdir)/plugins"

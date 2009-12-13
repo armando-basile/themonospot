@@ -1,0 +1,1 @@
+	gacutil /i "$(DESTDIR)$(programfilesdir)/themonospot-plugin-interface.dll" /package $(PACKAGE) /gacdir $(libdir) /root $(DESTDIR)$(libdir)

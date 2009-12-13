@@ -1,0 +1,9 @@
+#! /bin/bash
+
+mono --debug tbupdate.exe \
+-n themonospot-gui-qt-0.1.2 \
+-mf themonospot-gui-qt-0.1.2/themonospot-gui-qt/Makefile.in \
+-i themonospot-gui-qt-install \
+-u themonospot-gui-qt-uninstall
+
+rm -rf original

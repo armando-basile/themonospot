@@ -1,0 +1,3 @@
+	# Create folder of plugins
+	if test -d "$(DESTDIR)$(programfilesdir)/plugins"; then echo nothing to do ; else mkdir "$(DESTDIR)$(programfilesdir)/plugins"; fi
+	gacutil /i "$(DESTDIR)$(programfilesdir)/themonospot-base.dll" /package $(PACKAGE) /gacdir $(libdir) /root $(DESTDIR)$(libdir)
