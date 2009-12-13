@@ -19,11 +19,8 @@
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="cp themonospot-plugin-* ../../../../themonospot-console/bin/Debug/plugins/themonospot-plugin-avi/" workingdir="${TargetDir}" externalConsole="true" />
-      </CustomCommands>
-    </CustomCommands>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyKeyFile>themonospot-plugin-avi.snk</AssemblyKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -31,10 +28,15 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyKeyFile>themonospot-plugin-avi.snk</AssemblyKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="themonospot-plugin-interface, Version=0.1.0.0, Culture=neutral, PublicKeyToken=305a670b78a3dbbc">
+      <Package>themonospot-plugin-interface</Package>
+    </Reference>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
@@ -67,12 +69,5 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\classes\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\themonospot-plugin-interface\themonospot-plugin-interface.csproj">
-      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
-      <Name>themonospot-plugin-interface</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
 </Project>

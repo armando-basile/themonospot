@@ -1,3 +1,9 @@
+2009-12-14  Armando Basile  <hmandevteam@gmail.com>
+
+	* properties/AssemblyInfo.cs: 
+
+	- added sign in project file
+
 2009-12-13  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/PluginFactory.cs:
