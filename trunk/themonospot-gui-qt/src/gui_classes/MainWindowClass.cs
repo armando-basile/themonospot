@@ -349,11 +349,19 @@ namespace ThemonospotGuiQt
 			tw.SetHeaderLabels(twHeader);
 			tw.SetColumnWidth(0, 200);
 			
+			// add video parent widget
+			QTreeWidgetItem twiv = new QTreeWidgetItem(tw);
+			
+			// add video icon 
+			twiv.SetIcon(0,new QIcon(":/main/video_32.png"));
+			twiv.SetText(0, "Video");
+			
+			
 			// add video info to List
 			for (int k=0; k<video.Count; k++)
 			{
 				// add new QTreeWidgetItem object to our QTreeWidget
-				QTreeWidgetItem twi = new QTreeWidgetItem(tw);
+				QTreeWidgetItem twi = new QTreeWidgetItem(twiv);
 				
 				
 				// add description and value of information
@@ -365,12 +373,18 @@ namespace ThemonospotGuiQt
 				
 			}
 			
+			// add video parent widget
+			QTreeWidgetItem twia = new QTreeWidgetItem(tw);
+			twia.SetText(0, "Audio");
+			
+			// add video icon 
+			twia.SetIcon(0,new QIcon(":/main/sound.png"));
 			
 			// add audio info to List
 			for (int k=0; k<audio.Count; k++)
 			{
 				// add new QTreeWidgetItem object to our QTreeWidget
-				QTreeWidgetItem twi = new QTreeWidgetItem(tw);
+				QTreeWidgetItem twi = new QTreeWidgetItem(twia);
 				
 				// add description and value of information
 				twi.SetText(0, audio[k][0]);
@@ -381,6 +395,7 @@ namespace ThemonospotGuiQt
 				
 			}
 			
+			tw.ExpandAll();
 
 			// add QTreeView created to created Grid Layout
 			glayout.AddWidget(tw);

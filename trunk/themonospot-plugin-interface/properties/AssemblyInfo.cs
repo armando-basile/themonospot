@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Armando Basile")]
 [assembly: AssemblyProduct("themonospot-plugin-interface")]
-[assembly: AssemblyCopyright("2009 Armando Basile")]
+[assembly: AssemblyCopyright("(C) 2009 Armando Basile")]
 [assembly: AssemblyTrademark("None")]
 [assembly: AssemblyCulture("")]
 

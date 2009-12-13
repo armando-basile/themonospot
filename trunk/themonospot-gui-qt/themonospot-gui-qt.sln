@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-gui-qt", "themonospot-gui-qt.csproj", "{5B444F5B-ED36-413D-9E2A-32B757885096}"
@@ -34,7 +34,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = Qt gui for themonospot-base
-		version = 0.1.0
+		version = 0.1.2
 		StartupItem = themonospot-gui-qt.csproj
 	EndGlobalSection
 EndGlobal

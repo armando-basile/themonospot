@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Armando Basile")]
 [assembly: AssemblyProduct("themonospot-base")]
-[assembly: AssemblyCopyright("2003-2009 Armando Basile")]
+[assembly: AssemblyCopyright("(C) 2003-2009 Armando Basile")]
 [assembly: AssemblyTrademark("None")]
 [assembly: AssemblyDelaySign(false)]
 

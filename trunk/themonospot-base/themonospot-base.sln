@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-base", "themonospot-base.csproj", "{B28C190A-8FA1-4500-AC70-C244C8146A4D}"
@@ -28,7 +28,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = MONO/.Net component to parse/editor video files
-		version = 0.8.0
+		version = 0.8.1
 		StartupItem = themonospot-base.csproj
 	EndGlobalSection
 EndGlobal

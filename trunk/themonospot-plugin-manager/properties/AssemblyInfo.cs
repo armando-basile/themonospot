@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("themonospot-plugin-manager")]
-[assembly: AssemblyDescription("Manage plugins of themonospot application")]
+[assembly: AssemblyDescription("Plugin manager of themonospot application")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Armando Basile")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("2009 Armando Basile")]
+[assembly: AssemblyCopyright("(C) 2009 Armando Basile")]
 [assembly: AssemblyTrademark("None")]
 [assembly: AssemblyCulture("")]
 

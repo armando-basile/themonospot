@@ -47,6 +47,11 @@
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
+        <Policies>
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
         <Deployment.LinuxDeployData generatePcFile="false" />
       </Properties>
     </MonoDevelop>

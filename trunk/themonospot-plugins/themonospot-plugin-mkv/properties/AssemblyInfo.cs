@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Armando Basile")]
 [assembly: AssemblyProduct("themonospot-plugin-mkv")]
-[assembly: AssemblyCopyright("2009 Armando Basile")]
+[assembly: AssemblyCopyright("(C) 2009 Armando Basile")]
 [assembly: AssemblyTrademark("None")]
 [assembly: AssemblyDelaySign(false)]
 
