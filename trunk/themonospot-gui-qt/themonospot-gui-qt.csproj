@@ -67,6 +67,7 @@
     <Folder Include="src\" />
     <Folder Include="src\gui_classes\" />
     <Folder Include="src\classes\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -80,5 +81,9 @@
     <None Include="src\qt_files\MainWindow.ui" />
     <None Include="src\qt_files\AboutDialog.ui" />
     <None Include="src\qt_files\ScanningDialog.ui" />
+    <None Include="images\themonospot_48.png" />
+    <None Include="images\themonospot-qt.desktop">
+      <DeployService-TargetDirectoryId>Linux.DesktopApplications</DeployService-TargetDirectoryId>
+    </None>
   </ItemGroup>
 </Project>

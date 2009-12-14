@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=AudioVideo;AudioVideoEditing;Qt;KDE;
+Comment[it]=themonospot Qt - estrae informazioni da file multimediali
+Comment=themonospot Qt - estrae informazioni da file multimediali
+Comment[it_IT]=themonospot Qt - estrae informazioni da file multimediali
+Exec=themonospot-qt
+GenericName[it]=themonospot-qt
+GenericName=themonospot-qt
+Icon=themonospot-qt
+MimeType=
+Name[it]=themonospot-qt
+Name=themonospot-qt
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
