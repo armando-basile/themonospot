@@ -58,7 +58,14 @@ namespace ThemonospotBase
 			get {	return _traceFilePath; }
 			set
 			{
-				fs = new FileStream(value, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+				string fullPath = value.Trim();
+				if (fullPath.IndexOf("~") == 0)
+				{
+					fullPath = fullPath.Substring(1);
+					fullPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + 
+						fullPath;
+				}
+				fs = new FileStream(fullPath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
 				sw = new StreamWriter(fs);
 				_traceFilePath = value; 
 			}

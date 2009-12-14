@@ -153,7 +153,18 @@ namespace ThemonospotBase
 		public BaseFactory()
 		{
 			baseAssemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.ToString());
-			pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "plugins";
+			
+			if (IsWindows())
+				// On Windows OS
+				pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "plugins";
+			else
+			{
+				// On Others OS
+				pluginsAssemblyPath = 
+					Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+						Path.DirectorySeparatorChar + "themonospot" +
+						Path.DirectorySeparatorChar + "plugins";
+			}
 			
 			
 			ts.ReadConfigFile();
@@ -479,14 +490,29 @@ namespace ThemonospotBase
 		/// Return language files path for themonospot gui's
 		/// </summary>
 		public string GetGuiLanguagesPath()
-		{			
-			return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.ToString()) +
-				Path.DirectorySeparatorChar + "languages";
+		{	
+			if (IsWindows())
+				// On Windows OS
+				return baseAssemblyPath + Path.DirectorySeparatorChar + "languages";
+			else
+			{
+				// On Others OS
+				return 
+					Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+						Path.DirectorySeparatorChar + "themonospot" +
+						Path.DirectorySeparatorChar + "languages";
+			}
 		}
 		
 
 		
-		
+        private bool IsWindows()
+        {
+            PlatformID platform = Environment.OSVersion.Platform;           
+            return (platform == PlatformID.Win32NT | platform == PlatformID.Win32Windows |
+                    platform == PlatformID.Win32S | platform == PlatformID.WinCE);    
+        }
+
 		
 		
 		
