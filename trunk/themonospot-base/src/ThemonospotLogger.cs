@@ -13,6 +13,7 @@ namespace ThemonospotBase
 	public static class ThemonospotLogger
 	{
 		
+		static FileStream fs;
 		static StreamWriter sw;
 		static DefaultTraceListener dtl = new DefaultTraceListener();
 		
@@ -57,7 +58,8 @@ namespace ThemonospotBase
 			get {	return _traceFilePath; }
 			set
 			{
-				sw = new StreamWriter(value,true);
+				fs = new FileStream(value, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+				sw = new StreamWriter(fs);
 				_traceFilePath = value; 
 			}
 		}
@@ -80,6 +82,9 @@ namespace ThemonospotBase
 				sw.Close();
 				sw.Dispose();
 				sw = null;
+				fs.Close();
+				fs.Dispose();
+				fs = null;
 			}
 		}
 		

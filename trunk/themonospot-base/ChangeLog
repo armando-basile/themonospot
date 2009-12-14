@@ -1,5 +1,13 @@
 2009-12-14  Armando Basile  <hmandevteam@gmail.com>
 
+	* src/BaseFactory.cs:
+	* themonospot-base.csproj:
+	* src/ThemonospotLogger.cs: 
+
+	- shared connection of trace file stream
+
+2009-12-14  Armando Basile  <hmandevteam@gmail.com>
+
 	* themonospot-base.csproj: 
 
 	- added license file

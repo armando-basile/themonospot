@@ -174,6 +174,8 @@ namespace ThemonospotBase
 		/// </returns>
 		public string[] GetManagedExtentions()
 		{
+			string[] extensions = new string[0];
+			
 			string totalExt = "";
 			foreach (ThemonospotPluginEntity tp in pluginsAvailable) 
 			{
@@ -182,24 +184,27 @@ namespace ThemonospotBase
 			totalExt = totalExt.Replace(" ","");
 			totalExt = totalExt.Replace(".","");
 			
-			if (totalExt.Substring(totalExt.Length-1) == ";")
+			if (totalExt.Length > 0)
 			{
-				totalExt = totalExt.Remove(totalExt.Length-1);
-			}
-			
-			string[] extensions = totalExt.Split(Convert.ToChar(";"));
-			
-			// Remove duplicate
-			ArrayList outExtensions = new ArrayList();
-			
-			foreach (string ext in extensions) 
-			{
-				if(!outExtensions.Contains(ext))
+				if (totalExt.Substring(totalExt.Length-1) == ";")
 				{
-					outExtensions.Add(ext);
+					totalExt = totalExt.Remove(totalExt.Length-1);
 				}
+				
+				extensions = totalExt.Split(Convert.ToChar(";"));
+				
+				// Remove duplicate
+				ArrayList outExtensions = new ArrayList();
+				
+				foreach (string ext in extensions) 
+				{
+					if(!outExtensions.Contains(ext))
+					{
+						outExtensions.Add(ext);
+					}
+				}
+				extensions = (string[])outExtensions.ToArray(typeof(String));
 			}
-			extensions = (string[])outExtensions.ToArray(typeof(String));
 			
 			return extensions;
 			
