@@ -20,6 +20,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyKeyFile>themonospot-gui-qt.snk</AssemblyKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -28,6 +30,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyKeyFile>themonospot-gui-qt.snk</AssemblyKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -68,12 +72,9 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="qt-dotnet, Version=4.5.0.0, Culture=neutral, PublicKeyToken=194a23ba31c08164" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\themonospot-base\themonospot-base.csproj">
-      <Project>{B28C190A-8FA1-4500-AC70-C244C8146A4D}</Project>
-      <Name>themonospot-base</Name>
-    </ProjectReference>
+    <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
+      <Package>themonospot-base</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\qt_files\MainWindow.ui" />

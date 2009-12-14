@@ -10,6 +10,17 @@ rm -rf original
 
 mono --debug tbupdate.exe \
 -n themonospot-base-0.8.1 \
+-mf themonospot-base-0.8.1/themonospot-plugin-manager/Makefile.in \
+-i themonospot-plugin-manager-install \
+-u themonospot-plugin-manager-uninstall
+
+rm -rf original
+
+mono --debug tbupdate.exe \
+-n themonospot-base-0.8.1 \
 -mf themonospot-base-0.8.1/themonospot-base/Makefile.in \
 -i themonospot-base-install \
 -u themonospot-base-uninstall
+
+
+

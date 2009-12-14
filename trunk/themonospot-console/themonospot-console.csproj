@@ -8,6 +8,7 @@
     <ProjectGuid>{C2DA2923-0A20-4913-B7BF-F9347B840651}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>themonospot-console</AssemblyName>
+    <Description>Console interface for themonospot-base</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,6 +28,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
+      <Package>themonospot-base</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="properties\AssemblyInfo.cs" />
@@ -37,11 +41,5 @@
   <ItemGroup>
     <Folder Include="properties\" />
     <Folder Include="src\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\themonospot-base\themonospot-base.csproj">
-      <Project>{B28C190A-8FA1-4500-AC70-C244C8146A4D}</Project>
-      <Name>themonospot-base</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>

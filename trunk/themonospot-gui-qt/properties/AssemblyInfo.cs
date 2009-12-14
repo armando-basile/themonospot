@@ -11,6 +11,6 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTrademark("None")]
 [assembly: AssemblyDelaySign(false)]
 
-[assembly: AssemblyKeyFile("themonospot-gui-qt.snk")]
+//[assembly: AssemblyKeyFile("themonospot-gui-qt.snk")]
 
 

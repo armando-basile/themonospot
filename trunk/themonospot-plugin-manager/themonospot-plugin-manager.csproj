@@ -42,12 +42,6 @@
   <ItemGroup>
     <Folder Include="properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\themonospot-plugin-interface\themonospot-plugin-interface.csproj">
-      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
-      <Name>themonospot-plugin-interface</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
@@ -60,4 +54,10 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\themonospot-plugin-interface\themonospot-plugin-interface.csproj">
+      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
+      <Name>themonospot-plugin-interface</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
