@@ -52,7 +52,7 @@ namespace ThemonospotConsole
 			
 			if (ThemonospotLogger.TraceFilePath != "")
 			{
-				bFactory.TraceFilePath = ThemonospotLogger.TraceFilePath;
+				bFactory.TraceFilePath = ThemonospotLogger.TraceFilePath + ".base";
 			}
 			
 			
