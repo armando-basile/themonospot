@@ -1,3 +1,6 @@
 	# Create folder of plugins
-	if test -d "$(DESTDIR)$(programfilesdir)/plugins"; then echo nothing to do ; else mkdir "$(DESTDIR)$(programfilesdir)/plugins"; fi
+	if test -d "$(DESTDIR)$(prefix)/share"; then echo nothing to do ; else mkdir "$(DESTDIR)$(prefix)/share"; fi
+	if test -d "$(DESTDIR)$(prefix)/share/themonospot"; then echo nothing to do ; else mkdir "$(DESTDIR)$(prefix)/share/themonospot"; fi
+	if test -d "$(DESTDIR)$(prefix)/share/themonospot/plugins"; then echo nothing to do ; else mkdir "$(DESTDIR)$(prefix)/share/themonospot/plugins"; fi
+	cp -f -R "$(top_srcdir)/themonospot-base/languages" "$(DESTDIR)$(prefix)/share/themonospot"
 	gacutil /i "$(DESTDIR)$(programfilesdir)/themonospot-base.dll" /package $(PACKAGE) /gacdir $(libdir) /root $(DESTDIR)$(libdir)

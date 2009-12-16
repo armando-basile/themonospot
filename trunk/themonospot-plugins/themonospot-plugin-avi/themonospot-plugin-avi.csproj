@@ -34,9 +34,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="themonospot-plugin-interface, Version=0.1.0.0, Culture=neutral, PublicKeyToken=305a670b78a3dbbc">
-      <Package>themonospot-plugin-interface</Package>
-    </Reference>
+    <Reference Include="themonospot-plugin-interface, Version=0.1.0.0, Culture=neutral, PublicKeyToken=305a670b78a3dbbc" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

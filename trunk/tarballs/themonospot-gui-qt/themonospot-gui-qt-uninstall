@@ -1,2 +1,2 @@
-        rm -rf "$(DESTDIR)$(prefix)/share/applications/themonospot.desktop"
-        rm -rf "$(DESTDIR)$(prefix)/share/pixmaps/themonospot.png"
+	rm -rf "$(DESTDIR)$(prefix)/share/applications/themonospot-qt.desktop"
+	rm -rf "$(DESTDIR)$(prefix)/share/pixmaps/themonospot-qt.png"

@@ -167,6 +167,9 @@ namespace tbupdate
 			int UNINSTALLPF = MakeFile.IndexOf("uninstall-programfilesDATA:");
 			UNINSTALLPF = MakeFile.IndexOf("install-",UNINSTALLPF + 10);
 			
+			
+			
+			
 			SW.Write(MakeFile.Substring(0,UNINSTALLPF) + 			        
 			         UninstallSection + "\r\n");
 			
