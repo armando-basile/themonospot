@@ -1,3 +1,9 @@
+2009-12-16  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/BaseFactory.cs: 
+	
+	- add test mode
+
 2009-12-14  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/BaseFactory.cs:

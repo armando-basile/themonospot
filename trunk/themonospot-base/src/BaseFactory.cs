@@ -31,6 +31,7 @@ namespace ThemonospotBase
 		
 		private string baseAssemblyPath = "";
 		private string pluginsAssemblyPath = "";
+		private bool isTest = false;
 		
 		
 		
@@ -152,6 +153,28 @@ namespace ThemonospotBase
 		/// </summary>
 		public BaseFactory()
 		{
+			baseFactory();
+		}
+		
+		
+		
+		
+		/// <summary>
+		/// Constructor for test
+		/// </summary>
+		public BaseFactory(bool testMode)
+		{
+			isTest = testMode;
+			baseFactory();
+		}
+		
+		
+		
+		/// <summary>
+		/// Init base component
+		/// </summary>
+		private void baseFactory()
+		{
 			baseAssemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.ToString());
 			
 			if (IsWindows())
@@ -160,10 +183,19 @@ namespace ThemonospotBase
 			else
 			{
 				// On Others OS
-				pluginsAssemblyPath = 
-					Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
-						Path.DirectorySeparatorChar + "themonospot" +
-						Path.DirectorySeparatorChar + "plugins";
+				if (isTest)
+				{
+					// Test mode
+					pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "plugins";
+				}
+				else
+				{
+					// Not test mode
+					pluginsAssemblyPath = 
+						Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+							Path.DirectorySeparatorChar + "themonospot" +
+							Path.DirectorySeparatorChar + "plugins";
+				}
 			}
 			
 			
@@ -497,10 +529,21 @@ namespace ThemonospotBase
 			else
 			{
 				// On Others OS
-				return 
-					Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
-						Path.DirectorySeparatorChar + "themonospot" +
-						Path.DirectorySeparatorChar + "languages";
+				if (isTest)
+				{
+					// Test mode
+					pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "languages";
+				}
+				else
+				{
+					// Not test mode
+					pluginsAssemblyPath = 
+						Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+							Path.DirectorySeparatorChar + "themonospot" +
+							Path.DirectorySeparatorChar + "languages";
+				}
+				
+				return pluginsAssemblyPath;
 			}
 		}
 		
