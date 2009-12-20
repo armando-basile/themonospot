@@ -22,7 +22,7 @@ namespace ThemonospotGuiQt
 			QDesktopWidget qdw = new QDesktopWidget();
 			
 			// Create MainWindow class manager
-			MainWindowClass mwc = new MainWindowClass();
+			MainWindowClass mwc = new MainWindowClass(args);
 			
 			int wWidth = Convert.ToInt32(mwc.Width() / 2);
 			int wHeight = Convert.ToInt32(mwc.Height() / 2);
@@ -31,7 +31,7 @@ namespace ThemonospotGuiQt
 			
 			mwc.Move(dWidth - wWidth, dHeight - wHeight - 20);
 			
-			mwc.ParseAguments(args);
+			mwc.ParseAguments();
 			
 			mwc.Show();
 			

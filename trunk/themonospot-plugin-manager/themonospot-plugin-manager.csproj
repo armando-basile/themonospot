@@ -8,6 +8,10 @@
     <ProjectGuid>{45698D24-DCB0-4728-8EDB-C6DE0445156D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>themonospot-plugin-manager</AssemblyName>
+    <ReleaseVersion>0.2.0</ReleaseVersion>
+    <RootNamespace>themonospotpluginmanager</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>themonospot-plugin-manager.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -18,8 +22,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyKeyFile>themonospot-plugin-manager.snk</AssemblyKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -28,8 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyKeyFile>themonospot-plugin-manager.snk</AssemblyKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,10 +54,4 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <ItemGroup>
-    <ProjectReference Include="..\themonospot-plugin-interface\themonospot-plugin-interface.csproj">
-      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
-      <Name>themonospot-plugin-interface</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

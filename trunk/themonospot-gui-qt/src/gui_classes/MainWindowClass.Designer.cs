@@ -17,8 +17,9 @@ namespace ThemonospotGuiQt
 		
 		// ATTRIBUTES		
 		Ui.MainWindow mainwindow_Ui;
+		string[] localArgs;
 		ScanningDialogClass sdc;
-		BaseFactory bf = new BaseFactory();
+		BaseFactory bf;
 		Assembly execAssembly;
 		
 		List<FileInfoEntity> fiEntity;
@@ -30,8 +31,27 @@ namespace ThemonospotGuiQt
 		
 		
 		// CONSTRUCTOR
-		public MainWindowClass()
+		public MainWindowClass(string[] args)
 		{
+			localArgs = args;
+			
+			// Create new instance of Base Component factory class
+			if (args.Length > 0)
+			{
+				if (Convert.ToString(args[0]).ToLower() == "--test")
+				{
+					bf = new BaseFactory(true);
+				}
+				else
+				{
+					bf = new BaseFactory();
+				}
+			}
+			else
+			{
+				bf = new BaseFactory();
+			}
+			
 			// Update global information in GlobalData static object
 			UpdateGlobalObject();
 			
@@ -70,7 +90,7 @@ namespace ThemonospotGuiQt
 			
 			// Update Global informations
 			execAssembly = Assembly.GetExecutingAssembly();
-			GlobalData.QtRelease = execAssembly.GetName().Version.Major.ToString() + "." + 
+			GlobalData.GuiRelease = execAssembly.GetName().Version.Major.ToString() + "." + 
 								   execAssembly.GetName().Version.Minor.ToString() + "." + 
 				   				   execAssembly.GetName().Version.Build.ToString();
 			
@@ -82,13 +102,13 @@ namespace ThemonospotGuiQt
 			AssemblyDescriptionAttribute adAttr = 
                     (AssemblyDescriptionAttribute)Attribute.GetCustomAttribute(
                     execAssembly, typeof(AssemblyDescriptionAttribute));
-			GlobalData.QtDescription = adAttr.Description;
+			GlobalData.GuiDescription = adAttr.Description;
 			
 			// Get AssemblyCopyright
 			AssemblyCopyrightAttribute acAttr = 
                     (AssemblyCopyrightAttribute)Attribute.GetCustomAttribute(
                     execAssembly, typeof(AssemblyCopyrightAttribute));
-			GlobalData.QtCopyright = acAttr.Copyright;
+			GlobalData.GuiCopyright = acAttr.Copyright;
 
 			// Update managed extensions list
 			string[] managedExt = bf.GetManagedExtentions();
@@ -108,7 +128,7 @@ namespace ThemonospotGuiQt
 		private void UpdateGraphicObjects()
 		{
 			// Main Window Title
-			this.WindowTitle = "Themonospot [Qt] v" + GlobalData.QtRelease;
+			this.WindowTitle = "Themonospot [Qt] v" + GlobalData.GuiRelease;
 			
 			// LANGUAGE 
 			mainwindow_Ui.menu_File.Title = GlobalData.GetLanguageKeyValue("MAINFILE");
@@ -328,32 +348,32 @@ namespace ThemonospotGuiQt
 		
 		// Parse  command line arguments to detect
 		// startup operation
-		public void ParseAguments(string[] args)
+		public void ParseAguments()
 		{
 			// Parse Arguments
-			if (args.Length > 0)
+			if (localArgs.Length > 0)
 			{
 				// Disable debug as default
 				bf.Console = false;
 				
 
-				if (File.Exists(Convert.ToString(args[0])))
+				if (File.Exists(Convert.ToString(localArgs[0])))
 				{
 					// if is a file					
-					OpenFile(Convert.ToString(args[0]));					
+					OpenFile(Convert.ToString(localArgs[0]));					
 					
 				}
-				else if (Directory.Exists(Convert.ToString(args[0])))
+				else if (Directory.Exists(Convert.ToString(localArgs[0])))
 				{
 					// if is a folder					
-					OpenFolder(Convert.ToString(args[0]), false);					
+					OpenFolder(Convert.ToString(localArgs[0]), false);					
 					
 				}
 				
-				for (int h=0; h<args.Length; h++)
+				for (int h=0; h<localArgs.Length; h++)
 				{
 					// Parse all arguments and detect debug
-					if (Convert.ToString(args[h]).ToLower() == "debug")
+					if (Convert.ToString(localArgs[h]).ToLower() == "debug")
 					{
 						// if there is debug as argument, re enable debug
 						bf.Console = true;

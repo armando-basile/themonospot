@@ -10,6 +10,7 @@
     <AssemblyName>themonospot-gui-gtk</AssemblyName>
     <RootNamespace>ThemonospotGuiGtk</RootNamespace>
     <Description>Gtk gui for themonospot-base</Description>
+    <ReleaseVersion>0.2.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -19,6 +20,7 @@
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>3</WarningLevel>
+    <Commandlineparameters>--test</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -43,30 +45,29 @@
   <ItemGroup>
     <Compile Include="properties\AssemblyInfo.cs" />
     <Compile Include="src\Program.cs" />
-    <Compile Include="src\classes\Arguments.cs" />
-    <Compile Include="src\gtk_widgets\GtkWinMain.cs" />
+    <Compile Include="src\gtk_classes\MainWindowClass.Designer.cs" />
+    <Compile Include="src\gtk_classes\MainWindowClass.cs" />
+    <Compile Include="src\gtk_classes\ScanningDialogClass.cs" />
+    <Compile Include="src\gtk_classes\AboutDialogClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\resources\" />
-    <Folder Include="src\gtk_widgets\" />
+    <Folder Include="src\gtk_classes\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
+      <Package>themonospot-base</Package>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\themonospot-base\themonospot-base.csproj">
-      <Project>{B28C190A-8FA1-4500-AC70-C244C8146A4D}</Project>
-      <Name>themonospot-base</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="src\glade_files\GtkWinMain.glade">
-      <LogicalName>GtkWinMain.glade</LogicalName>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\resources\monologo.png">
       <LogicalName>monologo.png</LogicalName>
     </EmbeddedResource>
@@ -79,8 +80,17 @@
     <EmbeddedResource Include="src\resources\video.png">
       <LogicalName>video.png</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\glade_files\MainWindow.glade">
+      <LogicalName>MainWindow.glade</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\glade_files\ScanningDialog.glade">
+      <LogicalName>ScanningDialog.glade</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\glade_files\AboutDialog.glade">
+      <LogicalName>AboutDialog.glade</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\resources\themonospot.desktop" />
+    <None Include="src\resources\themonospot-gtk.desktop" />
   </ItemGroup>
 </Project>

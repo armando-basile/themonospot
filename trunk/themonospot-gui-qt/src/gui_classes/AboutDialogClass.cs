@@ -49,11 +49,11 @@ namespace ThemonospotGuiQt
 			aboutdialog_UI.tabInfo.SetTabText(0, GlobalData.GetLanguageKeyValue("ABOUTTABINFO"));
 			aboutdialog_UI.tabInfo.SetTabText(1, GlobalData.GetLanguageKeyValue("ABOUTTABCOMPONENTS"));
 			aboutdialog_UI.lblName.Text = "Themonospot [Qt]";
-			aboutdialog_UI.lblVersion.Text =  GlobalData.QtRelease;
+			aboutdialog_UI.lblVersion.Text =  GlobalData.GuiRelease;
 			aboutdialog_UI.txtInfo.SetText
 				("<b>Themonospot Qt</b><br />\r\n" +
-				 "&nbsp;&nbsp;" + GlobalData.QtDescription + "<br /><br />\r\n" +
-				 "Copyright " + GlobalData.QtCopyright + "<br /><br />\r\n" +
+				 "&nbsp;&nbsp;" + GlobalData.GuiDescription + "<br /><br />\r\n" +
+				 "Copyright " + GlobalData.GuiCopyright + "<br /><br />\r\n" +
 				 "<b>Website</b><br />\r\n" +
 				 "&nbsp;&nbsp;www.integrazioneweb.com/themonospot<br /><br />\r\n" +
 				 "<b>Developers</b><br />\r\n" + 

@@ -1,5 +1,6 @@
 
 using System;
+using ThemonospotBase;
 using Qyoto;
 
 namespace ThemonospotGuiQt

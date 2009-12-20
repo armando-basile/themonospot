@@ -11,23 +11,20 @@ namespace ThemonospotGuiGtk
 	public class Program
 	{
 		
-		BaseFactory bFactory;
-		
 		
 		[STAThread]
 		public static void Main(string[] args)
 		{
+			// Init Gtk Application
 			Gtk.Application.Init();
+
+			// Create a new MainWindowClass instance
+			MainWindowClass mainWindow = new MainWindowClass(args);
 			
-			bool retStart = false;
+			mainWindow.ParseArguments();
 			
-			GtkWinMain mainwindow = new GtkWinMain(args, ref retStart);
 			
-			if (!retStart)
-			{
-				return;
-			}
-			
+			// Run Gtk Application			
 			Gtk.Application.Run();
 			
 		}

@@ -10,6 +10,9 @@
     <AssemblyName>themonospot-gui-qt</AssemblyName>
     <RootNamespace>ThemonospotGuiQt</RootNamespace>
     <Description>Qt gui for themonospot-base</Description>
+    <ReleaseVersion>0.1.2</ReleaseVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>themonospot-gui-qt.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,8 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyKeyFile>themonospot-gui-qt.snk</AssemblyKeyFile>
+    <Commandlineparameters>--test</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -30,8 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyKeyFile>themonospot-gui-qt.snk</AssemblyKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -53,20 +53,14 @@
     <Compile Include="src\qt_classes\MainWindow.cs" />
     <Compile Include="src\gui_classes\MainWindowClass.Designer.cs" />
     <Compile Include="src\gui_classes\AboutDialogClass.cs" />
-    <Compile Include="src\classes\GlobalData.cs" />
     <Compile Include="src\gui_classes\ScanningDialogClass.cs" />
     <Compile Include="src\qt_classes\AboutDialog.cs" />
     <Compile Include="src\qt_classes\ScanningDialog.cs" />
-    <Compile Include="src\classes\CancelScanEventHandler.cs" />
-    <Compile Include="src\classes\FileInfoEntity.cs" />
-    <Compile Include="src\classes\LanguageManager.cs" />
-    <Compile Include="src\classes\SettingsManager.cs" />
     <Compile Include="src\gui_classes\MainWindowClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\gui_classes\" />
-    <Folder Include="src\classes\" />
     <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +69,7 @@
     <Reference Include="qt-dotnet, Version=4.5.0.0, Culture=neutral, PublicKeyToken=194a23ba31c08164" />
     <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
       <Package>themonospot-base</Package>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -82,8 +77,6 @@
     <None Include="src\qt_files\AboutDialog.ui" />
     <None Include="src\qt_files\ScanningDialog.ui" />
     <None Include="images\themonospot_48.png" />
-    <None Include="images\themonospot-qt.desktop">
-      <DeployService-TargetDirectoryId>Linux.DesktopApplications</DeployService-TargetDirectoryId>
-    </None>
+    <None Include="images\themonospot-qt.desktop" />
   </ItemGroup>
 </Project>

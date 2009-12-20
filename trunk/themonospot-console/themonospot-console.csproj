@@ -9,6 +9,8 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>themonospot-console</AssemblyName>
     <Description>Console interface for themonospot-base</Description>
+    <ReleaseVersion>0.1.0</ReleaseVersion>
+    <RootNamespace>themonospotconsole</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +32,7 @@
     <Reference Include="System" />
     <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
       <Package>themonospot-base</Package>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>
   <ItemGroup>

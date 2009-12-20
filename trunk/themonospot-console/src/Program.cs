@@ -45,7 +45,22 @@ namespace ThemonospotConsole
 			}
 			
 			// Base component instance
-			bFactory = new BaseFactory();
+			if(!string.IsNullOrEmpty(appArgs["test"]))
+			{
+				if(Convert.ToString(appArgs["test"]) == "true")
+				{
+					bFactory = new BaseFactory(true);
+				}
+				else
+				{
+					bFactory = new BaseFactory();
+				}
+			}
+			else
+			{
+				bFactory = new BaseFactory();
+			}
+			
 			bFactory.Console = ThemonospotLogger.Console;
 			bFactory.Listener = ThemonospotLogger.Listener;
 			bFactory.TraceFile = ThemonospotLogger.TraceFile;

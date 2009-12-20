@@ -9,6 +9,10 @@
     <OutputType>Library</OutputType>
     <AssemblyName>themonospot-plugin-interface</AssemblyName>
     <Description>Interface of plugins for themonospot application</Description>
+    <ReleaseVersion>0.2.0</ReleaseVersion>
+    <RootNamespace>themonospotplugininterface</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>themonospot-plugin-interface.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -19,8 +23,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyKeyFile>themonospot-plugin-interface.snk</AssemblyKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -29,8 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyKeyFile>themonospot-plugin-interface.snk</AssemblyKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
