@@ -209,7 +209,7 @@ namespace ThemonospotGuiGtk
 			// Main Window Title
 			MainWindow.Title = "Themonospot [Gtk] v" + GlobalData.GuiRelease;
 			Gdk.Geometry geo = new Gdk.Geometry();
-			geo.MinHeight = 600;
+			geo.MinHeight = 350;
 			geo.MinWidth = 650;
 			MainWindow.SetGeometryHints(grpResult, geo, Gdk.WindowHints.MinSize);
 			
