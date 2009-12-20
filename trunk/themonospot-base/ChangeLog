@@ -1,3 +1,29 @@
+2009-12-20  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/plugins:
+	* src/classes:
+	* src/PluginManager.cs:
+	* languages/english.xml:
+	* languages/spanish.xml:
+	* languages/italiano.xml:
+	* src/SettingsManager.cs:
+	* themonospot-base.csproj:
+	* src/ThemonospotLogger.cs:
+	* src/classes/GlobalData.cs:
+	* src/plugins/PluginManager.cs:
+	* src/classes/FileInfoEntity.cs:
+	* src/ThemonospotPluginEntity.cs:
+	* src/classes/LanguageManager.cs:
+	* src/classes/SettingsManager.cs:
+	* src/classes/ThemonospotLogger.cs:
+	* src/classes/CancelScanEventHandler.cs:
+	* src/plugins/ThemonospotPluginEntity.cs: 
+	
+	- moved shared classes into base component
+	- updated language files for Gtk requirements
+	- modified GlobalData object to make it more generic
+
+
 2009-12-16  Armando Basile  <hmandevteam@gmail.com>
 
 	* src/BaseFactory.cs: 

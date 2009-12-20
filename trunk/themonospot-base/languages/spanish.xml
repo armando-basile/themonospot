@@ -33,5 +33,9 @@
 		<AUTOREPORTTT>Para cada archivo analizado, genera automáticamente un archivo de informe en la misma carpeta</AUTOREPORTTT>
 		<INFOABOUTTT>Información sobre Themonospot</INFOABOUTTT>
 
+		<BTNCANCEL>Anular</BTNCANCEL>
+		<BTNOPEN>Abrir</BTNOPEN>
+		<BTNSAVE>Guardar</BTNSAVE>
+		
 	</language>
 </Settings>

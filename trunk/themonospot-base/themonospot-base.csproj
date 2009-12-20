@@ -50,15 +50,21 @@
   <ItemGroup>
     <Compile Include="properties\AssemblyInfo.cs" />
     <Compile Include="src\BaseFactory.cs" />
-    <Compile Include="src\SettingsManager.cs" />
     <Compile Include="src\exceptions\ThemonospotBaseException.cs" />
     <Compile Include="src\ThemonospotSettings.cs" />
-    <Compile Include="src\ThemonospotLogger.cs" />
-    <Compile Include="src\ThemonospotPluginEntity.cs" />
-    <Compile Include="src\PluginManager.cs" />
+    <Compile Include="src\classes\SettingsManager.cs" />
+    <Compile Include="src\classes\ThemonospotLogger.cs" />
+    <Compile Include="src\classes\CancelScanEventHandler.cs" />
+    <Compile Include="src\classes\FileInfoEntity.cs" />
+    <Compile Include="src\classes\GlobalData.cs" />
+    <Compile Include="src\classes\LanguageManager.cs" />
+    <Compile Include="src\plugins\PluginManager.cs" />
+    <Compile Include="src\plugins\ThemonospotPluginEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\exceptions\" />
+    <Folder Include="src\classes\" />
+    <Folder Include="src\plugins\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="languages\english.xml" />

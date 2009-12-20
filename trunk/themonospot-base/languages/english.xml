@@ -33,5 +33,9 @@
 		<AUTOREPORTTT>For each file scanned, auto generate a report file in the same folder</AUTOREPORTTT>
 		<INFOABOUTTT>Informations about Themonospot</INFOABOUTTT>
 		
+		<BTNCANCEL>Cancel</BTNCANCEL>
+		<BTNOPEN>Open</BTNOPEN>
+		<BTNSAVE>Save</BTNSAVE>
+		
 	</language>
 </Settings>

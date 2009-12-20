@@ -252,14 +252,20 @@ namespace ThemonospotBase
 		{
 			XmlNode root = doc.DocumentElement;
 			XmlNode s = root.SelectSingleNode('/' + rootName + '/' + section);
-
+			
 			if(s == null)
+			{
+				Console.WriteLine("languages not found");
 				return defaultValue;  //not found
-
+			}
+			
 			XmlNode n = s.SelectSingleNode(name);
 
 			if(n == null)
+			{
+				Console.WriteLine(name + " not found");
 				return defaultValue;  //not found
+			}
 
 			return n.InnerXml;
 		}

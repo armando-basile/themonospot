@@ -32,7 +32,10 @@
 		<EXITTT>Chiude l'applicazione</EXITTT>
 		<AUTOREPORTTT>Per ogni file scansionato, auto genera un file di rapporto nella stessa cartella</AUTOREPORTTT>
 		<INFOABOUTTT>Informazioni su Themonospot</INFOABOUTTT>
-
+		
+		<BTNCANCEL>Cancella</BTNCANCEL>
+		<BTNOPEN>Apri</BTNOPEN>
+		<BTNSAVE>Salva</BTNSAVE>
 		
 	</language>
 </Settings>
