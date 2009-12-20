@@ -1,5 +1,9 @@
 2009-12-20  Armando Basile  <hmandevteam@gmail.com>
 
+	* themonospot-base.csproj: 
+
+2009-12-20  Armando Basile  <hmandevteam@gmail.com>
+
 	* src/plugins:
 	* src/classes:
 	* src/PluginManager.cs:
