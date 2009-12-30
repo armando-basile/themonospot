@@ -16,7 +16,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = Qt gui for themonospot-base
-		version = 0.1.2
+		version = 0.1.3
 		StartupItem = themonospot-gui-qt.csproj
 	EndGlobalSection
 EndGlobal

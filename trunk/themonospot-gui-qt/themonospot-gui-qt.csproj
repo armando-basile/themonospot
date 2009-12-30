@@ -10,7 +10,7 @@
     <AssemblyName>themonospot-gui-qt</AssemblyName>
     <RootNamespace>ThemonospotGuiQt</RootNamespace>
     <Description>Qt gui for themonospot-base</Description>
-    <ReleaseVersion>0.1.2</ReleaseVersion>
+    <ReleaseVersion>0.1.3</ReleaseVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>themonospot-gui-qt.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -66,9 +66,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
-    <Reference Include="qt-dotnet, Version=4.5.0.0, Culture=neutral, PublicKeyToken=194a23ba31c08164" />
-    <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
+    <Reference Include="themonospot-base, Version=0.8.2.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
       <Package>themonospot-base</Package>
+    </Reference>
+    <Reference Include="qt-dotnet, Version=4.5.0.0, Culture=neutral, PublicKeyToken=194a23ba31c08164">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>
@@ -78,5 +81,6 @@
     <None Include="src\qt_files\ScanningDialog.ui" />
     <None Include="images\themonospot_48.png" />
     <None Include="images\themonospot-qt.desktop" />
+    <None Include="copying.gpl" />
   </ItemGroup>
 </Project>

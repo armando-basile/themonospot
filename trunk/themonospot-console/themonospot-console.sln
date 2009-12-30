@@ -16,7 +16,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = Console interface for themonospot base component
-		version = 0.1.0
+		version = 0.1.1
 		StartupItem = themonospot-console.csproj
 	EndGlobalSection
 EndGlobal

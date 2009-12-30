@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyVersion("0.8.1")]
+[assembly: AssemblyVersion("0.8.2")]
 [assembly: AssemblyTitle("themonospot-base")]
 [assembly: AssemblyDescription("MONO/.Net component to parse/editor video files")]
 [assembly: AssemblyConfiguration("")]

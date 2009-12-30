@@ -177,27 +177,8 @@ namespace ThemonospotBase
 		{
 			baseAssemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.ToString());
 			
-			if (IsWindows())
-				// On Windows OS
-				pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "plugins";
-			else
-			{
-				// On Others OS
-				if (isTest)
-				{
-					// Test mode
-					pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "plugins";
-				}
-				else
-				{
-					// Not test mode
-					pluginsAssemblyPath = 
-						Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
-							Path.DirectorySeparatorChar + "themonospot" +
-							Path.DirectorySeparatorChar + "plugins";
-				}
-			}
-			
+			// Plugins stay into subfolder plugins
+			pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "plugins";
 			
 			ts.ReadConfigFile();
 			

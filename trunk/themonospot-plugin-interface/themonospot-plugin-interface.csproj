@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AssemblyName>themonospot-plugin-interface</AssemblyName>
     <Description>Interface of plugins for themonospot application</Description>
-    <ReleaseVersion>0.2.0</ReleaseVersion>
+    <ReleaseVersion>0.8.2</ReleaseVersion>
     <RootNamespace>themonospotplugininterface</RootNamespace>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>themonospot-plugin-interface.snk</AssemblyOriginatorKeyFile>

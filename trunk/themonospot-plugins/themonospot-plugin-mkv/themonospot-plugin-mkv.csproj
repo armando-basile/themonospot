@@ -10,7 +10,7 @@
     <AssemblyName>themonospot-plugin-mkv</AssemblyName>
     <RootNamespace>ThemonospotPluginMkv</RootNamespace>
     <Description>themonospot-base plugin to manage Matroska files</Description>
-    <ReleaseVersion>0.2.0</ReleaseVersion>
+    <ReleaseVersion>0.1.1</ReleaseVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>themonospot-plugin-mkv.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -33,6 +33,11 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="themonospot-plugin-interface, Version=0.1.0.0, Culture=neutral, PublicKeyToken=305a670b78a3dbbc">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <Package>themonospot-plugin-interface</Package>
+    </Reference>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
@@ -61,10 +66,6 @@
     <Folder Include="src\classes\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\themonospot-plugin-interface\themonospot-plugin-interface.csproj">
-      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
-      <Name>themonospot-plugin-interface</Name>
-      <Private>False</Private>
-    </ProjectReference>
+    <None Include="copying.gpl" />
   </ItemGroup>
 </Project>

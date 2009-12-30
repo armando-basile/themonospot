@@ -10,7 +10,7 @@
     <AssemblyName>themonospot-gui-gtk</AssemblyName>
     <RootNamespace>ThemonospotGuiGtk</RootNamespace>
     <Description>Gtk gui for themonospot-base</Description>
-    <ReleaseVersion>0.2.0</ReleaseVersion>
+    <ReleaseVersion>0.2.1</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,9 +62,10 @@
     <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
-      <Package>themonospot-base</Package>
+    <Reference Include="themonospot-base, Version=0.8.2.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <Package>themonospot-base</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -92,5 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\resources\themonospot-gtk.desktop" />
+    <None Include="copying.gpl" />
   </ItemGroup>
 </Project>

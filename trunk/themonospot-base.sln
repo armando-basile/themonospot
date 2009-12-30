@@ -28,7 +28,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = MONO/.Net component to parse/editor video files
-		version = 0.8.1
+		version = 0.8.2
 		StartupItem = themonospot-base\themonospot-base.csproj
 	EndGlobalSection
 EndGlobal

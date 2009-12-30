@@ -16,7 +16,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = Gtk gui for themonospot-base
-		version = 0.2.0
+		version = 0.2.1
 		StartupItem = themonospot-gui-gtk.csproj
 	EndGlobalSection
 EndGlobal

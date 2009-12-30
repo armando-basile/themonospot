@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-avi", "themonospot-plugin-avi.csproj", "{0CFA67CF-76DA-4E96-8241-7CC72AFDD29D}"
@@ -16,7 +16,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = themonospot-base plugin to manage Avi files
-		version = 0.1.0
+		version = 0.1.1
 		StartupItem = themonospot-plugin-avi.csproj
 	EndGlobalSection
 EndGlobal

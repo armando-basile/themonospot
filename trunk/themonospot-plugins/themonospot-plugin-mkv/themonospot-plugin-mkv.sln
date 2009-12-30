@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-mkv", "themonospot-plugin-mkv.csproj", "{619B553D-11DF-4BCD-A28E-EFB9DCCD23F3}"
@@ -16,7 +16,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = themonospot-base plugin to manage Matroska files
-		version = 0.1.0
+		version = 0.1.1
 		StartupItem = themonospot-plugin-mkv.csproj
 	EndGlobalSection
 EndGlobal

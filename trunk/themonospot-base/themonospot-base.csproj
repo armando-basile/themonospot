@@ -10,7 +10,7 @@
     <AssemblyName>themonospot-base</AssemblyName>
     <RootNamespace>ThemonospotBase</RootNamespace>
     <Description>MONO/.Net component to parse/editor video files</Description>
-    <ReleaseVersion>0.8.1</ReleaseVersion>
+    <ReleaseVersion>0.8.2</ReleaseVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>themonospot-base.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>

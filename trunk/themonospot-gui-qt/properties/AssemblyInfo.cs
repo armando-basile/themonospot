@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyVersion("0.1.2")]
+[assembly: AssemblyVersion("0.1.3")]
 [assembly: AssemblyTitle("themonospot-gui-qt")]
 [assembly: AssemblyDescription("Qt gui for themonospot-base")]
 [assembly: AssemblyConfiguration("")]

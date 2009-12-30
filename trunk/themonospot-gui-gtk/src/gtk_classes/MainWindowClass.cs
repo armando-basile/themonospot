@@ -19,7 +19,7 @@ namespace ThemonospotGuiGtk
 		
 		private void OpenInfo()
 		{
-			AboutDialogClass awc = new AboutDialogClass(ref MainWindow);
+			new AboutDialogClass(ref MainWindow);
 			// awc.Show();
 		}
 		

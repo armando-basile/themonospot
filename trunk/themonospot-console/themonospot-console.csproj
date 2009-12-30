@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>themonospot-console</AssemblyName>
     <Description>Console interface for themonospot-base</Description>
-    <ReleaseVersion>0.1.0</ReleaseVersion>
+    <ReleaseVersion>0.1.1</ReleaseVersion>
     <RootNamespace>themonospotconsole</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,9 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="themonospot-base, Version=0.8.1.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
-      <Package>themonospot-base</Package>
+    <Reference Include="themonospot-base, Version=0.8.2.0, Culture=neutral, PublicKeyToken=de3cf999ee7ad14d">
       <SpecificVersion>False</SpecificVersion>
+      <Package>themonospot-base</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -44,5 +44,8 @@
   <ItemGroup>
     <Folder Include="properties\" />
     <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="copying.gpl" />
   </ItemGroup>
 </Project>

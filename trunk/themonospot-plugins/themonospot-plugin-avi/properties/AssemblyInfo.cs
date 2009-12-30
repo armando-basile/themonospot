@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyVersion("0.1.0")]
+[assembly: AssemblyVersion("0.1.1")]
 [assembly: AssemblyTitle("themonospot-plugin-avi")]
 [assembly: AssemblyDescription("themonospot-base plugin to manage Avi files")]
 [assembly: AssemblyConfiguration("")]

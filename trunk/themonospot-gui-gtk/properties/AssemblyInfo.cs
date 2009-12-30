@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-[assembly: AssemblyVersion("0.2.0")]
+[assembly: AssemblyVersion("0.2.1")]
 [assembly: AssemblyTitle("themonospot-gui-gtk")]
 [assembly: AssemblyDescription("Gtk gui for themonospot-base")]
 [assembly: AssemblyConfiguration("")]
