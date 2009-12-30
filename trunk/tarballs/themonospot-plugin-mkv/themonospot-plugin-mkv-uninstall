@@ -1,0 +1,14 @@
+	cd "$(DESTDIR)$(prefix)"	
+	rm -rf "$(DESTDIR)$(programfilesdir)"	
+	if test `ls "$(DESTDIR)$(libdir)/themonospot/plugins"| wc -w` -gt 0 ; then \
+	    echo "nothing to do"; \
+	else \
+	    rm -rf "$(DESTDIR)$(libdir)/themonospot/plugins"; \
+	    echo "rm -rf '$(DESTDIR)$(libdir)/themonospot/plugins'"; \
+	fi 
+	if test `ls "$(DESTDIR)$(libdir)/themonospot"| wc -w` -gt 0 ; then \
+	    echo "nothing to do"; \
+	else \
+	    rm -rf "$(DESTDIR)$(libdir)/themonospot"; \
+	    echo "rm -rf '$(DESTDIR)$(libdir)/themonospot'"; \
+	fi
