@@ -1,0 +1,6 @@
+Name: themonospot-plugin-interface
+Description: Interface of plugins for themonospot application
+Version: 0.8.2
+
+Requires: 
+Libs: -r:@expanded_libdir@/themonospot/themonospot-plugin-interface.dll

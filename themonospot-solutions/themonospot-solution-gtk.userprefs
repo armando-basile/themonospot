@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../themonospot-plugins/themonospot-plugin-mpeg/src/PluginFactory.cs" ctype="Workbench">
+    <Files>
+      <File FileName="../themonospot-base/src/plugins/PluginManager.cs" Line="1" Column="1" />
+      <File FileName="../themonospot-plugins/themonospot-plugin-avi/src/PluginFactory.cs" Line="1" Column="1" />
+      <File FileName="../themonospot-plugins/themonospot-plugin-mkv/src/PluginFactory.cs" Line="1" Column="1" />
+      <File FileName="../themonospot-plugins/themonospot-plugin-mpeg/src/PluginFactory.cs" Line="68" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="themonospot-gui-gtk" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

@@ -1,0 +1,3 @@
+pkglibexecdir = $(libexecdir)/themonospot
+pkglibdir = $(libdir)/themonospot
+programfilesdir = @libdir@/themonospot

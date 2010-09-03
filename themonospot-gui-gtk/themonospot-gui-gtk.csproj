@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9BC1345-2361-4652-A4D3-096DEC716DD8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>themonospot-gui-gtk</AssemblyName>
+    <RootNamespace>ThemonospotGuiGtk</RootNamespace>
+    <Description>Gtk gui for themonospot-base</Description>
+    <ReleaseVersion>0.2.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <Commandlineparameters>--test</Commandlineparameters>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
+        <Deployment.LinuxDeployData scriptName="themonospot-gtk" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="properties\AssemblyInfo.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\gtk_classes\MainWindowClass.Designer.cs" />
+    <Compile Include="src\gtk_classes\MainWindowClass.cs" />
+    <Compile Include="src\gtk_classes\ScanningDialogClass.cs" />
+    <Compile Include="src\gtk_classes\AboutDialogClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\resources\" />
+    <Folder Include="src\gtk_classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\log4net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="src\resources\monologo.png">
+      <LogicalName>monologo.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\resources\sound.png">
+      <LogicalName>sound.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\resources\themonospot.png">
+      <LogicalName>themonospot.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\resources\video.png">
+      <LogicalName>video.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\glade_files\MainWindow.glade">
+      <LogicalName>MainWindow.glade</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\glade_files\ScanningDialog.glade">
+      <LogicalName>ScanningDialog.glade</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\glade_files\AboutDialog.glade">
+      <LogicalName>AboutDialog.glade</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\resources\themonospot-gtk.desktop" />
+    <None Include="copying.gpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\themonospot-base\themonospot-base.csproj">
+      <Project>{B28C190A-8FA1-4500-AC70-C244C8146A4D}</Project>
+      <Name>themonospot-base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\themonospot-components\themonospot-components.csproj">
+      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
+      <Name>themonospot-components</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

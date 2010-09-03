@@ -1,0 +1,6 @@
+Name: themonospot-base
+Description: MONO/.Net component to parse/editor video files
+Version: 0.8.2
+
+Requires: 
+Libs: -r:@expanded_libdir@/themonospot/themonospot-base.dll

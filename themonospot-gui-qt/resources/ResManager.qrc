@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="main" >
+    <file>export.png</file>
+    <file>application-exit.png</file>
+    <file>document-open.png</file>
+    <file>document-save-as.png</file>
+    <file>sound.png</file>
+    <file>themonospot_48.png</file>
+    <file>video_32.png</file>
+  </qresource>
+</RCC>

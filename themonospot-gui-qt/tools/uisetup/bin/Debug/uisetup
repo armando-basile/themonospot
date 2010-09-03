@@ -1,0 +1,11 @@
+#! /bin/bash
+
+function pause(){
+  read -s -n 1 -p "Press any key to continue . . ."
+  echo
+} 
+
+mono uisetup.exe -id "../../../../resources" -od "../../../../src/qt_classes"
+mono uisetup.exe -id "../../../../src/qt_files" -od "../../../../src/qt_classes"
+
+#pause

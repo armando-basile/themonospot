@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C523D3F-CC65-4DA3-899A-BF34543A6312}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>themonospot-plugin-mpeg</AssemblyName>
+    <RootNamespace>ThemonospotPluginMpeg</RootNamespace>
+    <Description>themonospot-base plugin to manage Mpeg files</Description>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>themonospot-plugin-mkv.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\resources\log4net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
+        <Deployment.LinuxDeployData generatePcFile="false" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Compile Include="properties\AssemblyInfo.cs" />
+    <Compile Include="src\PluginFactory.cs" />
+    <Compile Include="src\classes\MpegManager.cs" />
+    <Compile Include="src\classes\MpegConstants.cs" />
+    <Compile Include="src\classes\MpegStreams.cs" />
+    <Compile Include="src\classes\MpegAudioStream.cs" />
+    <Compile Include="src\classes\MpegVideoStream.cs" />
+    <Compile Include="src\classes\MpegStreamManager.cs" />
+    <Compile Include="src\classes\MpegVideoParser.cs" />
+    <Compile Include="src\classes\MpegAudioParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="copying.gpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\themonospot-components\themonospot-components.csproj">
+      <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
+      <Name>themonospot-components</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
