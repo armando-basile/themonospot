@@ -1,3 +1,0 @@
-pkglibexecdir = $(libexecdir)/themonospot/plugins/@PACKAGE@
-pkglibdir = $(libdir)/themonospot/plugins/@PACKAGE@ 
-programfilesdir = @libdir@/themonospot/plugins/@PACKAGE@

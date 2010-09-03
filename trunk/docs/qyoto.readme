@@ -1,9 +1,0 @@
-write a qyoto.pc file as follow in /usr/lib/pkgconfig folder:
-   prefix=/usr
-   exec_prefix=${prefix}
-   libdir=${exec_prefix}/lib
-
-   Name: Qyoto
-   Description: Qt .NET/Mono bindings
-   Version: 4.5.0
-   Libs: -r:${libdir}/mono/2.0/qt-dotnet.dll 
