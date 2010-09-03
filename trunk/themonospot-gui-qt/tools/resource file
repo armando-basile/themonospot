@@ -1,0 +1,1 @@
+csrcc ThemonospotQt.qrc -name ThemonospotQt > ThemonospotQt.cs 

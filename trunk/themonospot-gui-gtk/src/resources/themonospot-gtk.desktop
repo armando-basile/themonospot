@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=AudioVideo;AudioVideoEditing;GTK;GNOME;
+Comment[it]=Themonospot Gtk - estrae informazioni da file multimediali
+Comment=Themonospot Gtk - estrae informazioni da file multimediali
+Comment[it_IT]=Themonospot Gtk - estrae informazioni da file multimediali
+Exec=themonospot-gtk
+GenericName[it]=Themonospot-Gtk
+GenericName=Themonospot-Gtk
+Icon=themonospot-gtk
+MimeType=
+Name[it]=Themonospot-Gtk
+Name=Themonospot-Gtk
+StartupNotify=true
+Terminal=false
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

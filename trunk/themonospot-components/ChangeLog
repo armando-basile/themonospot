@@ -1,0 +1,11 @@
+2009-12-13  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-plugin-interface.userprefs: 
+
+	- change position of base component solution file
+
+2009-12-13  Armando Basile  <hmandevteam@gmail.com>
+
+	* properties/AssemblyInfo.cs: 
+
+	- added sign to project file and removed from AssemblyInfo

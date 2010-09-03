@@ -1,0 +1,51 @@
+
+    // LOAD ASSEMBLY
+
+    string path = cglobal.mglobal.AppPath() + "plugins" + System.IO.Path.DirectorySeparatorChar;
+    string[] files = System.IO.Directory.GetFiles(path);
+    lstInstalled.Items.Clear();
+    
+    foreach (string f in files)
+    {
+	System.AppDomain domain = System.AppDomain.CreateDomain(System.IO.Path.GetFileName(f));
+	System.IO.StreamReader reader = new System.IO.StreamReader(f, System.Text.Encoding.GetEncoding(1252), false);
+	byte[] b = new byte[reader.BaseStream.Length];
+	reader.BaseStream.Read(b, 0, System.Convert.ToInt32(reader.BaseStream.Length));
+	domain.Load(b);
+	
+	System.Reflection.Assembly[] a = domain.GetAssemblies();
+	int index = 0;
+
+	for (int x = 0; x < a.Length; x++)
+	{
+	  if (a[x].GetName().Name + ".dll" == System.IO.Path.GetFileName(f))
+	  {
+	    index = x;
+	    break;
+	  }
+	}
+
+	System.Windows.Forms.ListViewItem item = new ListViewItem();
+
+        item.Text = a[index].GetName().Name + ".dll";
+	item.SubItems.Add(a[index].GetName().Version.ToString());
+	item.SubItems.Add(reader.BaseStream.Length.ToString());
+	lstInstalled.Items.Add(item);
+	reader.Close();
+	cglobal.mglobal.domains.Add(System.IO.Path.GetFileName(f), domain);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

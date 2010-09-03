@@ -1,0 +1,73 @@
+2009-12-20  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-base.csproj: 
+
+2009-12-20  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/plugins:
+	* src/classes:
+	* src/PluginManager.cs:
+	* languages/english.xml:
+	* languages/spanish.xml:
+	* languages/italiano.xml:
+	* src/SettingsManager.cs:
+	* themonospot-base.csproj:
+	* src/ThemonospotLogger.cs:
+	* src/classes/GlobalData.cs:
+	* src/plugins/PluginManager.cs:
+	* src/classes/FileInfoEntity.cs:
+	* src/ThemonospotPluginEntity.cs:
+	* src/classes/LanguageManager.cs:
+	* src/classes/SettingsManager.cs:
+	* src/classes/ThemonospotLogger.cs:
+	* src/classes/CancelScanEventHandler.cs:
+	* src/plugins/ThemonospotPluginEntity.cs: 
+	
+	- moved shared classes into base component
+	- updated language files for Gtk requirements
+	- modified GlobalData object to make it more generic
+
+
+2009-12-16  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/BaseFactory.cs: 
+	
+	- add test mode
+
+2009-12-14  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/BaseFactory.cs:
+	* themonospot-base.csproj:
+	* src/ThemonospotLogger.cs: 
+
+	- changes for tarball config
+
+2009-12-14  Armando Basile  <hmandevteam@gmail.com>
+
+	* src/BaseFactory.cs:
+	* themonospot-base.csproj:
+	* src/ThemonospotLogger.cs: 
+
+	- shared connection of trace file stream
+
+2009-12-14  Armando Basile  <hmandevteam@gmail.com>
+
+	* themonospot-base.csproj: 
+
+	- added license file
+
+2009-12-13  Armando Basile  <hmandevteam@gmail.com>
+
+	* readme:
+	* languages/spanish.xml:
+	* themonospot-base.pidb:
+	* themonospot-base.csproj: 
+
+	- added spanish language file
+	- bug fix: missing sign to release config of themonospot-base
+
+2009-12-13  Armando Basile  <hmandevteam@gmail.com>
+
+	* properties/AssemblyInfo.cs: 
+
+	- added sign to project file and removed from AssemblyInfo
