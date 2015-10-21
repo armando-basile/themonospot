@@ -1,2 +1,0 @@
-        rm -rf "$(DESTDIR)$(prefix)/share/applications/themonospot.desktop"
-        rm -rf "$(DESTDIR)$(prefix)/share/pixmaps/themonospot.png"

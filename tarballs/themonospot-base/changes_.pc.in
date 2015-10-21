@@ -1,5 +1,0 @@
-change @PACKAGE@ with themonospot 
-
-es:
-Libs: -r:@expanded_libdir@/@PACKAGE@/themonospot-base.dll
-Libs: -r:@expanded_libdir@/themonospot/themonospot-base.dll

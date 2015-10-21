@@ -1,9 +1,0 @@
-	rm -rf "$(DESTDIR)$(prefix)/share/applications/themonospot-gtk.desktop"
-	rm -rf "$(DESTDIR)$(prefix)/share/pixmaps/themonospot-gtk.png"
-	cd "$(DESTDIR)$(prefix)"
-	if test `ls "$(DESTDIR)$(programfilesdir)"| wc -w` -gt 0 ; then \
-	    echo "nothing to do"; \
-	else \
-	    rm -rf "$(DESTDIR)$(programfilesdir)"; \
-	    echo "rm -rf '$(DESTDIR)$(programfilesdir)'"; \
-	fi
