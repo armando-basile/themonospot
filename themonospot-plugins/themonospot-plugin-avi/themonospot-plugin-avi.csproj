@@ -10,6 +10,7 @@
     <Description>themonospot-base plugin to manage Avi files</Description>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>themonospot-plugin-avi.snk</AssemblyOriginatorKeyFile>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,6 +59,9 @@
     <Compile Include="src\classes\BitmapInfoHeaderEntity.cs" />
     <Compile Include="src\classes\WaveFormatExEntity.cs" />
     <Compile Include="src\classes\AviStreamEntity.cs" />
+    <Compile Include="..\..\SolutionAssemblyInfo.cs">
+      <Link>properties\SolutionAssemblyInfo.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />

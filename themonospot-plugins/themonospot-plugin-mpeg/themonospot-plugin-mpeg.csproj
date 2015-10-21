@@ -10,6 +10,7 @@
     <Description>themonospot-base plugin to manage Mpeg files</Description>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>themonospot-plugin-mkv.snk</AssemblyOriginatorKeyFile>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +56,9 @@
     <Compile Include="src\classes\MpegStreamManager.cs" />
     <Compile Include="src\classes\MpegVideoParser.cs" />
     <Compile Include="src\classes\MpegAudioParser.cs" />
+    <Compile Include="..\..\SolutionAssemblyInfo.cs">
+      <Link>properties\SolutionAssemblyInfo.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />

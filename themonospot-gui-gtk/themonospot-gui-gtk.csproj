@@ -8,7 +8,7 @@
     <AssemblyName>themonospot-gui-gtk</AssemblyName>
     <RootNamespace>ThemonospotGuiGtk</RootNamespace>
     <Description>Gtk gui for themonospot-base</Description>
-    <ReleaseVersion>0.2.0</ReleaseVersion>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +47,9 @@
     <Compile Include="src\gtk_classes\MainWindowClass.cs" />
     <Compile Include="src\gtk_classes\ScanningDialogClass.cs" />
     <Compile Include="src\gtk_classes\AboutDialogClass.cs" />
+    <Compile Include="..\SolutionAssemblyInfo.cs">
+      <Link>properties\SolutionAssemblyInfo.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />

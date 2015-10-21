@@ -9,6 +9,7 @@
     <RootNamespace>themonospotpluginmanager</RootNamespace>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>themonospot-plugin-manager.snk</AssemblyOriginatorKeyFile>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +36,9 @@
   <ItemGroup>
     <Compile Include="AssemblyLoader.cs" />
     <Compile Include="properties\AssemblyInfo.cs" />
+    <Compile Include="..\SolutionAssemblyInfo.cs">
+      <Link>properties\SolutionAssemblyInfo.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
