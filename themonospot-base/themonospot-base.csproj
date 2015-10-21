@@ -64,9 +64,15 @@
     <Folder Include="src\plugins\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="languages\english.xml" />
-    <None Include="languages\italiano.xml" />
-    <None Include="languages\spanish.xml" />
+    <None Include="languages\english.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="languages\italiano.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="languages\spanish.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="copying.gpl" />
     <None Include="readme" />
   </ItemGroup>

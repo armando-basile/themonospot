@@ -60,11 +60,8 @@
     <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="log4net">
-      <HintPath>..\resources\log4net.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=0952489d85cf957a" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="src\resources\monologo.png">
@@ -101,7 +98,22 @@
     <ProjectReference Include="..\themonospot-components\themonospot-components.csproj">
       <Project>{3397AC59-BBD5-418B-8EED-3446035DF24E}</Project>
       <Name>themonospot-components</Name>
-      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\themonospot-plugins\themonospot-plugin-avi\themonospot-plugin-avi.csproj">
+      <Project>{0CFA67CF-76DA-4E96-8241-7CC72AFDD29D}</Project>
+      <Name>themonospot-plugin-avi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\themonospot-plugin-manager\themonospot-plugin-manager.csproj">
+      <Project>{45698D24-DCB0-4728-8EDB-C6DE0445156D}</Project>
+      <Name>themonospot-plugin-manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\themonospot-plugins\themonospot-plugin-mkv\themonospot-plugin-mkv.csproj">
+      <Project>{619B553D-11DF-4BCD-A28E-EFB9DCCD23F3}</Project>
+      <Name>themonospot-plugin-mkv</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\themonospot-plugins\themonospot-plugin-mpeg\themonospot-plugin-mpeg.csproj">
+      <Project>{7C523D3F-CC65-4DA3-899A-BF34543A6312}</Project>
+      <Name>themonospot-plugin-mpeg</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
