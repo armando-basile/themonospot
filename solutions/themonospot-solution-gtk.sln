@@ -1,19 +1,19 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-manager", "..\themonospot-plugin-manager\themonospot-plugin-manager.csproj", "{45698D24-DCB0-4728-8EDB-C6DE0445156D}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-base", "..\themonospot-base\themonospot-base.csproj", "{B28C190A-8FA1-4500-AC70-C244C8146A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-gui-qt", "..\themonospot-gui-qt\themonospot-gui-qt.csproj", "{5B444F5B-ED36-413D-9E2A-32B757885096}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-gui-gtk", "..\themonospot-gui-gtk\themonospot-gui-gtk.csproj", "{B9BC1345-2361-4652-A4D3-096DEC716DD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-avi", "..\themonospot-plugins\themonospot-plugin-avi\themonospot-plugin-avi.csproj", "{0CFA67CF-76DA-4E96-8241-7CC72AFDD29D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-mkv", "..\themonospot-plugins\themonospot-plugin-mkv\themonospot-plugin-mkv.csproj", "{619B553D-11DF-4BCD-A28E-EFB9DCCD23F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-mpeg", "..\themonospot-plugins\themonospot-plugin-mpeg\themonospot-plugin-mpeg.csproj", "{7C523D3F-CC65-4DA3-899A-BF34543A6312}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-manager", "..\themonospot-plugin-manager\themonospot-plugin-manager.csproj", "{45698D24-DCB0-4728-8EDB-C6DE0445156D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-components", "..\themonospot-components\themonospot-components.csproj", "{3397AC59-BBD5-418B-8EED-3446035DF24E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themonospot-plugin-mpeg", "..\themonospot-plugins\themonospot-plugin-mpeg\themonospot-plugin-mpeg.csproj", "{7C523D3F-CC65-4DA3-899A-BF34543A6312}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{45698D24-DCB0-4728-8EDB-C6DE0445156D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45698D24-DCB0-4728-8EDB-C6DE0445156D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45698D24-DCB0-4728-8EDB-C6DE0445156D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B444F5B-ED36-413D-9E2A-32B757885096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B444F5B-ED36-413D-9E2A-32B757885096}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B444F5B-ED36-413D-9E2A-32B757885096}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B444F5B-ED36-413D-9E2A-32B757885096}.Release|Any CPU.Build.0 = Release|Any CPU
 		{619B553D-11DF-4BCD-A28E-EFB9DCCD23F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{619B553D-11DF-4BCD-A28E-EFB9DCCD23F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{619B553D-11DF-4BCD-A28E-EFB9DCCD23F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,8 +45,13 @@ Global
 		{B28C190A-8FA1-4500-AC70-C244C8146A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B28C190A-8FA1-4500-AC70-C244C8146A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B28C190A-8FA1-4500-AC70-C244C8146A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9BC1345-2361-4652-A4D3-096DEC716DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9BC1345-2361-4652-A4D3-096DEC716DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9BC1345-2361-4652-A4D3-096DEC716DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9BC1345-2361-4652-A4D3-096DEC716DD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ..\themonospot-gui-qt\themonospot-gui-qt.csproj
+		description = Gtk gui for themonospot-base
+		version = 0.2.0
 	EndGlobalSection
 EndGlobal
