@@ -114,6 +114,9 @@ namespace ThemonospotGuiGtk
 				GlobalData.bFactory.TraceFolderPath = traceFolderPath;
 			}
 			
+            // Init language file
+            GlobalData.InitLanguage(GlobalData.bFactory.GetGuiLanguagesPath());
+
 			// Scan plugins
 			GlobalData.bFactory.ScanPlugins();
 			
