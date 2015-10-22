@@ -65,9 +65,7 @@ namespace ThemonospotGuiQt
 				 "&nbsp;&nbsp;Rigel.va<br />\r\n" + 
 				 "&nbsp;&nbsp;Mubumba <i>(mubumba@gmail.com)</i><br /><br />\r\n" + 				 
 				 "<b>Bugs report</b><br />\r\n" +
-				 "&nbsp;&nbsp;code.google.com/p/monosim/issues/list<br /><br />\r\n" +
-				 "<b>Irc contact</b><br />\r\n" +
-				 "&nbsp;&nbsp;irc.eu.azzurra.net &nbsp;&nbsp;channel <i>#mono</i><br />\r\n");
+                 "&nbsp;&nbsp;https://github.com/armando-basile/themonospot/issues<br /><br />\r\n");
 			
 			
 			// fill components area information
