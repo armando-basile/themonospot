@@ -9,7 +9,8 @@ GenericName=Themonospot-Qt
 Icon=themonospot-gui-qt
 Name[it]=Themonospot-Qt
 Name=Themonospot-Qt
+Name[it_IT]=Themonospot-Qt
 StartupNotify=true
 Terminal=false
 Type=Application
-Name[it_IT]=themonospot-qt.desktop
+

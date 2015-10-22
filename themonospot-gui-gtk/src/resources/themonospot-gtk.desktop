@@ -7,13 +7,10 @@ Exec=themonospot-gui-gtk
 GenericName[it]=Themonospot-Gtk
 GenericName=Themonospot-Gtk
 Icon=themonospot-gui-gtk
-MimeType=
 Name[it]=Themonospot-Gtk
 Name=Themonospot-Gtk
+Name[it_IT]=Themonospot-Gtk
 StartupNotify=true
 Terminal=false
 Type=Application
-X-DBUS-ServiceName=
-X-DBUS-StartupType=
-X-KDE-SubstituteUID=false
-X-KDE-Username=
+
