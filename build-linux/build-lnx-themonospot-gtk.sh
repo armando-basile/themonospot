@@ -1,7 +1,8 @@
 #! /bin/bash
+set -e
 
 TARGET="Debug"
-DIRNAME=`dirname $0`
+DIRNAME="$(dirname "$(readlink -f "$0")")"
 PRJNAME="themonospot-gui-gtk"
 
 # detect if there is a target specified
