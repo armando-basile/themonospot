@@ -71,7 +71,7 @@ namespace ThemonospotGuiQt
 		{
 			
 			// Init language file
-			GlobalData.InitLanguage( GlobalData.bFactory.GetGuiLanguagesPath());
+			//GlobalData.InitLanguage( GlobalData.bFactory.GetGuiLanguagesPath());
 			
 			// Update Global informations
 			execAssembly = Assembly.GetExecutingAssembly();
