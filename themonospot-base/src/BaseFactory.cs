@@ -429,28 +429,38 @@ namespace ThemonospotBase
 		/// </summary>
 		public string GetGuiLanguagesPath()
 		{	
+            string pluginsLanguagePath = "";
+
 			if (utils.IsWindows())
 				// On Windows OS
-				return baseAssemblyPath + Path.DirectorySeparatorChar + "languages";
+                pluginsLanguagePath = baseAssemblyPath + Path.DirectorySeparatorChar + "languages";
+            
 			else
 			{
 				// On Others OS
 				if (IsTest)
 				{
 					// Test mode
-					pluginsAssemblyPath = baseAssemblyPath + Path.DirectorySeparatorChar + "languages";
+                    pluginsLanguagePath = baseAssemblyPath + Path.DirectorySeparatorChar + "languages";
+
 				}
 				else
 				{
 					// Not test mode
-					pluginsAssemblyPath = 
+                    pluginsAssemblyPath = 
 						Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
-							Path.DirectorySeparatorChar + "themonospot" +
-							Path.DirectorySeparatorChar + "languages";
+                        Path.DirectorySeparatorChar + "themonospot" + 
+                        Path.DirectorySeparatorChar + "plugins";
+                    pluginsLanguagePath = 
+                        Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) +
+                        Path.DirectorySeparatorChar + "themonospot" + 
+                        Path.DirectorySeparatorChar + "languages";
+                    
 				}
 				
-				return pluginsAssemblyPath;
 			}
+
+            return pluginsLanguagePath;
 		}
 		
 
