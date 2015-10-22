@@ -34,9 +34,7 @@ namespace ThemonospotConsole
 		public static void Main(string[] args)
 		{
 			
-			release = Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." + 
-					  Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString() + "." + 
-				   	  Assembly.GetExecutingAssembly().GetName().Version.Build.ToString();
+			release = Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
 			
 			
 			// Parse parameters
@@ -248,6 +246,7 @@ namespace ThemonospotConsole
 			outHelp += "   --debug=true".PadRight(40) + "enable debug mode\r\n";
 			outHelp += "   --listen=true".PadRight(40) + "enable listen on default listener\r\n";
 			outHelp += "   --recursive=true".PadRight(40) + "enable recursive folders scan\r\n";
+            outHelp += "   --test=true".PadRight(40) + "enable use of app folder files\r\n";
 			outHelp += "   --trace=true".PadRight(40) + "enable trace on specific file\r\n";			
 			
 			outHelp += "\r\n\r\n";
@@ -345,6 +344,10 @@ namespace ThemonospotConsole
 				GlobalData.bFactory.TraceFolderPath = traceFolderPath;
 			}
 			
+            // Init language file
+            GlobalData.InitLanguage(GlobalData.bFactory.GetGuiLanguagesPath());
+
+
 			// Scan plugins
 			GlobalData.bFactory.ScanPlugins();
 			
