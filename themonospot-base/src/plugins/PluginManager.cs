@@ -49,7 +49,7 @@ namespace ThemonospotBase
 				return;
 			}
 			
-			
+            log.Debug("LoadPlugins: " + pluginsPath);
 			
 			foreach (DirectoryInfo di in pluginDirInfo.GetDirectories("themonospot-plugin*"))
 			{

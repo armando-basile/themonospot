@@ -460,6 +460,8 @@ namespace ThemonospotBase
 				
 			}
 
+            log.Warn("PLUGIN FOLDER: " + pluginsAssemblyPath);
+
             return pluginsLanguagePath;
 		}
 		
