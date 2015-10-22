@@ -75,9 +75,7 @@ namespace ThemonospotGuiQt
 			
 			// Update Global informations
 			execAssembly = Assembly.GetExecutingAssembly();
-			GlobalData.GuiRelease = execAssembly.GetName().Version.Major.ToString() + "." + 
-								   execAssembly.GetName().Version.Minor.ToString() + "." + 
-				   				   execAssembly.GetName().Version.Build.ToString();
+			GlobalData.GuiRelease = execAssembly.GetName().Version.ToString(3);
 			
 			GlobalData.BaseRelease = GlobalData.bFactory.Release;
 			GlobalData.AppPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().FullName);

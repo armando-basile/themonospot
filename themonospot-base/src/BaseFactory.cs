@@ -47,9 +47,7 @@ namespace ThemonospotBase
 		{
 			get	
 			{	
-				return Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." + 
-					Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString() + "." + 
-				   	Assembly.GetExecutingAssembly().GetName().Version.Build.ToString();				
+                return Assembly.GetExecutingAssembly().GetName().Version.ToString(3);				
 			}
 		}
 		
