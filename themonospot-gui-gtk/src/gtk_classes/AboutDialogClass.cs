@@ -77,9 +77,7 @@ namespace ThemonospotGuiGtk
 				"  Rigel.va\r\n" + 
 				"  Mubumba <i>(mubumba@gmail.com)</i>\r\n\r\n" + 				 
 				"<b>Bugs report</b>\r\n" +
-				"  code.google.com/p/monosim/issues/list\r\n\r\n" +
-				"<b>Irc contact</b>\r\n" +
-				"  irc.eu.azzurra.net   channel <i>#mono</i>\r\n";
+                "  https://github.com/armando-basile/themonospot/issues\r\n";
 			
 			vp.Add(lblContent);
 			
