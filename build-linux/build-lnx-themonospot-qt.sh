@@ -4,7 +4,6 @@ set -e
 TARGET="Debug"
 DIRNAME="$(dirname "$(readlink -f "$0")")"
 PRJNAME="themonospot-gui-qt"
-echo "\n $PRJNAME \n"
 
 # detect if there is a target specified
 if [ $# -gt 0 ] ; then
