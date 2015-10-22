@@ -76,11 +76,11 @@
     <None Include="languages\italiano.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="languages\spanish.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="copying.gpl" />
     <None Include="readme" />
+    <None Include="languages\español.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\themonospot-plugin-manager\themonospot-plugin-manager.csproj">
