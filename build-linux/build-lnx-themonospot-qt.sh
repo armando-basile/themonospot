@@ -11,7 +11,7 @@ if [ $# -gt 0 ] ; then
 fi
 
 # Clean and Build
-xbuild /t:Rebuild /p:Configuration=$TARGET  ../solutions/themonospot-solution-qt.sln
+xbuild /t:Rebuild /p:Configuration=$TARGET  $DIRNAME/../solutions/themonospot-solution-qt.sln
 
 # move plugins into subfolders
 rm -rf $DIRNAME/../$PRJNAME/bin/$TARGET/plugins
