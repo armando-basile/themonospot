@@ -31,7 +31,9 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=0952489d85cf957a" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=0952489d85cf957a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
