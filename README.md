@@ -1,4 +1,4 @@
-# Themonospot
+# Themonospot &nbsp;&nbsp;&nbsp;<img src='https://travis-ci.org/armando-basile/themonospot.svg?branch=master' border='0' />
 **themonospot** is a simple application cross platform, written in C# that can be used 
 to scan your multimedia files to extract audio and video streams informations.
 
