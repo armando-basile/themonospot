@@ -22,7 +22,7 @@ for build and run see [Wiki pages](https://github.com/armando-basile/themonospot
 ---
 
 
-Copyright (c) 2007-2015, Armando Basile
+Copyright (c) 2007-2016, Armando Basile
 
 
 
